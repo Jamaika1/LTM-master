@@ -1,0 +1,12 @@
+{
+    "dump_surfaces" : false,
+    "temporal_enabled" : true,
+    "encoding_transform_type" : "dds",
+    "residual_mode_enabled" : false,
+    "predicted_residual" : true,
+    "temporal_use_reduced_signalling" : true,
+    "encoding_downsample_luma" : "lanczos3",
+    "encoding_downsample_chroma" : "lanczos3",
+    "encoding_upsample" : "modifiedcubic",
+    "num_processed_planes" : 1
+}

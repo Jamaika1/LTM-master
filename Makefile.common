@@ -1,0 +1,239 @@
+# Makefile.common
+#
+
+### Decoder
+##
+DECODER_SRCS_CPP=\
+	src/ModelDecoderApp.cpp\
+\
+	decoder/src/Decoder.cpp\
+\
+	decoder/src/BaseVideoDecoder.cpp\
+	decoder/src/Deserializer.cpp\
+	decoder/src/EntropyDecoder.cpp\
+	decoder/src/Dimensions.cpp\
+	decoder/src/HuffmanDecoder.cpp\
+\
+	decoder/src/InverseQuantize.cpp\
+	decoder/src/InverseTransformDD.cpp\
+	decoder/src/InverseTransformDDS.cpp\
+	decoder/src/InverseTransformDD_1D.cpp\
+	decoder/src/InverseTransformDDS_1D.cpp\
+	decoder/src/Deblocking.cpp\
+	decoder/src/Convert.cpp\
+	decoder/src/Add.cpp\
+	decoder/src/Upsampling.cpp\
+	decoder/src/PredictedResidual.cpp\
+	decoder/src/TemporalDecode.cpp\
+	decoder/src/Conform.cpp\
+	decoder/src/Dithering.cpp\
+	decoder/src/Expand.cpp\
+	decoder/src/Probe.cpp\
+	decoder/src/ScanEnhancement.cpp\
+\
+	util/src/BitstreamUnpacker.cpp\
+	util/src/BitstreamStatistic.cpp\
+	util/src/Surface.cpp\
+	util/src/Packet.cpp\
+	util/src/Buffer.cpp\
+	util/src/Image.cpp\
+	util/src/Component.cpp\
+	util/src/Diagnostics.cpp\
+	util/src/YUVReader.cpp\
+	util/src/YUVWriter.cpp\
+	util/src/LcevcMd5.cpp\
+	util/src/Misc.cpp\
+	util/src/Codec.cpp\
+\
+	src/Types.cpp\
+	src/uESFile.cpp\
+	src/uYUVDesc.cpp\
+	src/uBaseDecoder.cpp\
+	src/uBaseDecoderHEVC.cpp\
+	src/uBaseDecoderAVC.cpp\
+	src/uBaseDecoderVVC.cpp\
+	src/uBaseDecoderEVC.cpp\
+	src/uString.cpp\
+
+DECODER_SRCS_C=\
+	utils/src/CodecUtils.c\
+
+### Encoder
+##
+ENCODER_SRCS_CPP=\
+	src/ModelEncoderApp.cpp\
+\
+	encoder/src/Compare.cpp\
+	encoder/src/Crop.cpp\
+	encoder/src/Downsampling.cpp\
+	encoder/src/Encoder.cpp\
+	encoder/src/EntropyEncoder.cpp\
+	encoder/src/FileEncoder.cpp\
+	encoder/src/HuffmanEncoder.cpp\
+	encoder/src/LayerEncodeFlags.cpp\
+	encoder/src/ParameterDefaults.cpp\
+	encoder/src/PriorityConfiguration.cpp\
+	encoder/src/PriorityMap.cpp\
+	encoder/src/Quantize.cpp\
+	encoder/src/ResidualMap.cpp\
+	encoder/src/Serializer.cpp\
+	encoder/src/Subtract.cpp\
+	encoder/src/TemporalEncode.cpp\
+	encoder/src/TransformDD.cpp\
+	encoder/src/TransformDDS.cpp\
+	encoder/src/TransformDDS_1D.cpp\
+	encoder/src/TransformDD_1D.cpp\
+\
+	decoder/src/Add.cpp\
+	decoder/src/Conform.cpp\
+	decoder/src/Convert.cpp\
+	decoder/src/Deblocking.cpp\
+	decoder/src/Dimensions.cpp\
+	decoder/src/Dithering.cpp\
+	decoder/src/EntropyDecoder.cpp\
+	decoder/src/Expand.cpp\
+	decoder/src/HuffmanDecoder.cpp\
+	decoder/src/InverseQuantize.cpp\
+	decoder/src/InverseTransformDD.cpp\
+	decoder/src/InverseTransformDDS.cpp\
+	decoder/src/InverseTransformDDS_1D.cpp\
+	decoder/src/InverseTransformDD_1D.cpp\
+	decoder/src/PredictedResidual.cpp\
+	decoder/src/Probe.cpp\
+	decoder/src/TemporalDecode.cpp\
+	decoder/src/Upsampling.cpp\
+\
+	util/src/Parameters.cpp\
+	util/src/Misc.cpp\
+	util/src/Diagnostics.cpp\
+	util/src/YUVReader.cpp\
+	util/src/YUVWriter.cpp\
+	util/src/Surface.cpp\
+	util/src/Packet.cpp\
+	util/src/Buffer.cpp\
+	util/src/Image.cpp\
+	util/src/Component.cpp\
+	util/src/BitstreamPacker.cpp\
+	util/src/BitstreamUnpacker.cpp\
+	util/src/BitstreamStatistic.cpp\
+	util/src/LcevcMd5.cpp\
+\
+	src/Types.cpp\
+	src/uESFile.cpp\
+	src/uBaseDecoder.cpp\
+	src/uBaseDecoderHEVC.cpp\
+	src/uBaseDecoderAVC.cpp\
+	src/uBaseDecoderVVC.cpp\
+	src/uBaseDecoderEVC.cpp\
+
+### Tests
+##
+TESTS_SRCS_CPP=\
+	TestGenerate.cpp\
+\
+	TransformDD.cpp\
+	TransformDDS.cpp\
+	TransformDD_1D.cpp\
+	TransformDDS_1D.cpp\
+	InverseTransformDD.cpp\
+	InverseTransformDDS.cpp\
+	InverseTransformDD_1D.cpp\
+	InverseTransformDDS_1D.cpp\
+	LayerEncodeFlags.cpp\
+\
+	YUVReader.cpp\
+	YUVWriter.cpp\
+	Diagnostics.cpp\
+	Surface.cpp\
+	Packet.cpp\
+	Buffer.cpp\
+	Image.cpp\
+	Component.cpp\
+	BitstreamPacker.cpp\
+	BitstreamUnpacker.cpp\
+	Misc.cpp\
+\
+	Convert.cpp\
+
+VTM_SRCS_CPP=\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/Slice.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/ParameterSetManager.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/Picture.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/BitStream.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/Hash.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/Rom.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/Buffer.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/Unit.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/UnitTools.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/CodingStructure.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/Mv.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/InterPrediction.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/HRD.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/InterpolationFilter.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/WeightPrediction.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/SampleAdaptiveOffset.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/RdCost.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/RdCostWeightPrediction.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/MCTS.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/ContextModelling.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/Contexts.cpp\
+	deps/base_vvc/minimum_VTM/source/Lib/CommonLib/ProfileLevelTier.cpp\
+\
+	deps/base_vvc/minimum_VTM/source/Lib/DecoderLib/VLCReader.cpp
+
+## CPP Includes
+#
+INCLUDES=\
+	-Iutil/include\
+	-Idecoder/include\
+	-Iencoder/include\
+	-Icommon/include\
+	-Isrc\
+	-Itests\
+	-I$(OBJSDIR)\
+	-Ideps/cxxopts/include\
+	-Ideps/json/include
+
+## CPP defines
+#
+DEFINES=-DBITSTREAM_DEBUG=0 -DNDEBUG=
+
+## Object files
+#
+VTM_OBJS=$(VTM_SRCS_CPP:%.cpp=$(OBJSDIR)/%$(OBJ))
+
+#
+DECODER_OBJS=$(DECODER_SRCS_CPP:%.cpp=$(OBJSDIR)/%$(OBJ)) $(DECODER_SRCS_C:%.c=$(OBJSDIR)/%$(OBJ))
+DECODER_ALL_OBJS=$(DECODER_OBJS) $(VTM_OBJS)
+
+#
+ENCODER_OBJS=$(ENCODER_SRCS_CPP:%.cpp=$(OBJSDIR)/%$(OBJ)) $(ENCODER_SRCS_C:%.c=$(OBJSDIR)/%$(OBJ))
+ENCODER_ALL_OBJS=$(ENCODER_OBJS) $(VTM_OBJS)
+
+#
+TESTS_ALL_OBJS=$(TESTS_SRCS_CPP:%.cpp=$(OBJSDIR)/%$(OBJ))
+
+## Specific includes
+
+$(OBJSDIR)/decoder/src/BaseVideoDecoderJM$(OBJ) $(JM_OBJS): INCLUDES+=-Ideps/base_avc/include -Ideps/base_avc/JM/source/lib/lcommon -Ideps/base_avc/JM/source/app/ldecod
+
+$(OBJSDIR)/decoder/src/BaseVideoDecoderHM$(OBJ) $(HM_OBJS): INCLUDES+=-Ideps/base_hevc/include -Ideps/base_hevc/HM/source/Lib
+
+$(OBJSDIR)/src/uBaseDecoderVVC$(OBJ) $(VTM_OBJS): INCLUDES+=-Ideps/base_vvc/minimum_VTM/source/Lib
+
+#
+## Documentation
+#
+README.pdf: README.md
+	pandoc README.md -o README.pdf
+
+README.html: README.md
+	pandoc README.md -o README.html
+
+## Tests
+#
+quick_test: $(TARGETS)
+	(cd tests && $(PYTHON) codectest.py --test_file=quick_tests.csv)
+
+test: $(TARGETS)
+	(cd tests && $(PYTHON) codectest.py --test_file=tests.csv)

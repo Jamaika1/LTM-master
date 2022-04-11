@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\biaridecod.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\block.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\cabac.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\configfile.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\context_ini.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\decoder_test.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\dec_statistics.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\erc_api.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\erc_do_i.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\erc_do_p.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\errorconcealment.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\filehandle.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\fmo.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\header.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\image.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\intra16x16_pred.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\intra16x16_pred_mbaff.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\intra16x16_pred_normal.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\intra4x4_pred.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\intra4x4_pred_mbaff.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\intra4x4_pred_normal.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\intra8x8_pred.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\intra8x8_pred_mbaff.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\intra8x8_pred_normal.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\intra_chroma_pred.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\intra_chroma_pred_mbaff.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\intra_pred_common.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\ldecod.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\leaky_bucket.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\loopFilter.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\loop_filter_mbaff.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\loop_filter_normal.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\macroblock.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\mbuffer.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\mbuffer_mvc.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\mb_access.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\mb_prediction.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\mb_read.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\mc_direct.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\mc_prediction.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\nal.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\nalu.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\output.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\parset.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\quant.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\read_comp_cabac.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\read_comp_cavlc.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\rtp.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\sei.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\transform8x8.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\app\ldecod\vlc.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\lib\lcommon\blk_prediction.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\lib\lcommon\config_common.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\lib\lcommon\img_io.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\lib\lcommon\img_process.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\lib\lcommon\input.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\lib\lcommon\io_raw.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\lib\lcommon\io_tiff.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\lib\lcommon\mbuffer_common.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\lib\lcommon\memalloc.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\lib\lcommon\mv_prediction.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\lib\lcommon\nalucommon.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\lib\lcommon\parsetcommon.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\lib\lcommon\resize.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\lib\lcommon\transform.c" />
+    <ClCompile Include="..\..\deps\base_avc\JM\source\lib\lcommon\win32.c" />
+    <ClCompile Include="..\..\deps\base_avc\src\annexb.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\deps\base_avc\include\annexb.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\annexb.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\biaridecod.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\block.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\cabac.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\configfile.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\context_ini.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\contributors.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\dec_statistics.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\defines.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\elements.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\erc_api.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\erc_do.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\erc_globals.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\errorconcealment.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\filehandle.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\fmo.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\global.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\h264decoder.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\header.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\image.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\intra16x16_pred.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\intra4x4_pred.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\intra8x8_pred.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\leaky_bucket.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\loopfilter.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\loop_filter.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\macroblock.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\mbuffer.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\mbuffer_mvc.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\mb_prediction.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\mc_prediction.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\nalu.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\output.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\parset.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\quant.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\rtp.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\sei.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\transform8x8.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\app\ldecod\vlc.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\blk_prediction.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\config_common.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\ctx_tables.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\distortion.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\enc_statistics.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\fast_memory.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\frame.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\ifunctions.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\img_io.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\img_process.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\img_process_types.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\input.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\io_image.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\io_raw.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\io_tiff.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\io_video.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\lagrangian.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\mbuffer_common.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\mb_access.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\memalloc.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\mv_prediction.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\nalucommon.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\parsetcommon.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\quant_params.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\report.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\resize.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\transform.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\typedefs.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\types.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\vui_params.h" />
+    <ClInclude Include="..\..\deps\base_avc\JM\source\lib\lcommon\win32.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\deps\base_avc\JM\source\app\ldecod\CMakeLists.txt" />
+    <Text Include="..\..\deps\base_avc\JM\source\lib\lcommon\CMakeLists.txt" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>AvcDec</ProjectName>
+    <ProjectGuid>{F8B77A48-AF6C-4746-A89F-B706ABA6AD94}</ProjectGuid>
+    <RootNamespace>AvcDec</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\$(Platform)\$(Configuration)\$(RootNamespace)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\$(Platform)\$(Configuration)\$(RootNamespace)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)\$(Platform)\$(Configuration)\$(RootNamespace)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)\$(Platform)\$(Configuration)\$(RootNamespace)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\$(Platform)\$(Configuration)\$(RootNamespace)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\$(Platform)\$(Configuration)\$(RootNamespace)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)\$(Platform)\$(Configuration)\$(RootNamespace)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)\$(Platform)\$(Configuration)\$(RootNamespace)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\deps\base_avc\JM\source\app\ldecod;$(SolutionDir)\..\deps\base_avc\JM\source\lib\lcommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\deps\base_avc\JM\source\app\ldecod;$(SolutionDir)\..\deps\base_avc\JM\source\lib\lcommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\deps\base_avc\JM\source\app\ldecod;$(SolutionDir)\..\deps\base_avc\JM\source\lib\lcommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\deps\base_avc\JM\source\app\ldecod;$(SolutionDir)\..\deps\base_avc\JM\source\lib\lcommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

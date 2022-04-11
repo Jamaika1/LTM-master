@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\AdaptiveLoopFilter.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\AlfParameters.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\BitStream.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Buffer.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\CacheModel.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\ChromaFormat.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\CodingStructure.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Common.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\CommonDef.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\ContextModelling.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Contexts.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\DepQuant.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\dtrace.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\dtrace_buffer.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\dtrace_codingstruct.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\dtrace_next.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Hash.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\HRD.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\InterpolationFilter.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\InterPrediction.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\MCTS.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\MotionInfo.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Mv.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\ParameterSetManager.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Picture.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\ProfileLevelTier.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Quant.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\QuantRDOQ.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\RdCost.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\RdCostWeightPrediction.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Reshape.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Rom.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\SampleAdaptiveOffset.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\SEI.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Slice.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\TrQuant.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\TypeDef.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Unit.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\UnitPartitioner.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\UnitTools.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\version.h" />
+    <ClInclude Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\WeightPrediction.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\BitStream.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Buffer.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\CodingStructure.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\ContextModelling.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Contexts.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Hash.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\HRD.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\InterpolationFilter.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\InterPrediction.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\MCTS.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Mv.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\ParameterSetManager.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Picture.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\ProfileLevelTier.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\RdCost.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\RdCostWeightPrediction.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Rom.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\SampleAdaptiveOffset.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Slice.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\Unit.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\UnitTools.cpp" />
+    <ClCompile Include="..\..\deps\base_vvc\minimum_VTM\source\Lib\CommonLib\WeightPrediction.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{FA70A548-CA72-4FBB-BD23-9B3A01F6C0EC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MinimumVvcCom</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectName>MinimumVvcCom</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\$(Platform)\$(Configuration)\$(RootNamespace)\</OutDir>
+    <IntDir>$(SolutionDir)\$(Platform)\$(Configuration)\$(RootNamespace)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\$(Platform)\$(Configuration)\$(RootNamespace)\</OutDir>
+    <IntDir>$(SolutionDir)\$(Platform)\$(Configuration)\$(RootNamespace)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\$(Platform)\$(Configuration)\$(RootNamespace)\</OutDir>
+    <IntDir>$(SolutionDir)\$(Platform)\$(Configuration)\$(RootNamespace)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\$(Platform)\$(Configuration)\$(RootNamespace)\</OutDir>
+    <IntDir>$(SolutionDir)\$(Platform)\$(Configuration)\$(RootNamespace)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\deps\base_vvc\minimum_VTM\source\Lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\deps\base_vvc\minimum_VTM\source\Lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\deps\base_vvc\minimum_VTM\source\Lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\deps\base_vvc\minimum_VTM\source\Lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

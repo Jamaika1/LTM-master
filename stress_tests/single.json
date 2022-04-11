@@ -1,0 +1,11 @@
+[
+	{
+		"description":"Main Profile Tool Set",
+		"name":"MP_SET-1",
+		"include-parameters":"main_profile.json",
+		"parameters":{},
+		"sets":["default", "stress"],
+		"checksums":{},
+		"configuration_check":""
+	}
+]

@@ -1,0 +1,28 @@
+{
+    "default": {
+        "Cactus": "Cactus_49frames_1920x1080_yuv420p_8bit",
+        "CanYouReadThis": "CanYouReadThis_49frames_1920x1080_yuv420p_8bit",
+        "ParkRunning3_10bit": "ParkRunning3_63frames_3840x2160_yuv420p_10bit",
+        "ParkRunning3_12bit": "ParkRunning3_63frames_3840x2160_yuv420p_12bit",
+        "ParkRunning3_14bit": "ParkRunning3_63frames_3840x2160_yuv420p_14bit"
+    },
+    "luma": {
+        "ParkRunning3_10bit": "ParkRunning3_63frames_3840x2160_yuv420p_10bit_luma",
+        "ParkRunning3_12bit": "ParkRunning3_63frames_3840x2160_yuv420p_12bit_luma",
+        "ParkRunning3_14bit": "ParkRunning3_63frames_3840x2160_yuv420p_14bit_luma"
+    },
+    "10+bit": {
+        "Cactus": "Cactus_49frames_1920x1080_yuv420p_10bit",
+        "CanYouReadThis": "CanYouReadThis_49frames_1920x1080_yuv420p_10bit",
+        "ParkRunning3_10bit": "ParkRunning3_63frames_3840x2160_yuv420p_10bit",
+        "ParkRunning3_12bit": "ParkRunning3_63frames_3840x2160_yuv420p_12bit",
+        "ParkRunning3_14bit": "ParkRunning3_63frames_3840x2160_yuv420p_14bit"
+    },
+    "12+bit": {
+        "Cactus": "Cactus_49frames_1920x1080_yuv420p_12bit",
+        "CanYouReadThis": "CanYouReadThis_49frames_1920x1080_yuv420p_12bit",
+        "ParkRunning3_10bit": "ParkRunning3_63frames_3840x2160_yuv420p_12bit",
+        "ParkRunning3_12bit": "ParkRunning3_63frames_3840x2160_yuv420p_12bit",
+        "ParkRunning3_14bit": "ParkRunning3_63frames_3840x2160_yuv420p_14bit"
+    }
+}

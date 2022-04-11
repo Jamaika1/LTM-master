@@ -1,0 +1,7 @@
+CODECAPI_1.0 {
+  global:
+    CodecAPI_*;
+
+  local:
+    *;
+};

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\decoder\src\Add.cpp" />
+    <ClCompile Include="..\..\decoder\src\BaseVideoDecoder.cpp" />
+    <ClCompile Include="..\..\decoder\src\BaseVideoDecoderHM.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\deps\base_hevc\include;$(SolutionDir)..\deps\base_hevc\HM\source\Lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\deps\base_hevc\include;$(SolutionDir)..\deps\base_hevc\HM\source\Lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\deps\base_hevc\include;$(SolutionDir)..\deps\base_hevc\HM\source\Lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\deps\base_hevc\include;$(SolutionDir)..\deps\base_hevc\HM\source\Lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\src\BaseVideoDecoderJM.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\deps\base_avc\include;$(SolutionDir)..\deps\base_avc\JM\source\lib\lcommon;$(SolutionDir)..\deps\base_avc\JM\source\app\ldecod;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\deps\base_avc\include;$(SolutionDir)..\deps\base_avc\JM\source\lib\lcommon;$(SolutionDir)..\deps\base_avc\JM\source\app\ldecod;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\deps\base_avc\include;$(SolutionDir)..\deps\base_avc\JM\source\lib\lcommon;$(SolutionDir)..\deps\base_avc\JM\source\app\ldecod;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\deps\base_avc\include;$(SolutionDir)..\deps\base_avc\JM\source\lib\lcommon;$(SolutionDir)..\deps\base_avc\JM\source\app\ldecod;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\decoder\src\Convert.cpp" />
+    <ClCompile Include="..\..\decoder\src\Deblocking.cpp" />
+    <ClCompile Include="..\..\decoder\src\Decoder.cpp" />
+    <ClCompile Include="..\..\decoder\src\Deserializer.cpp" />
+    <ClCompile Include="..\..\decoder\src\Dimensions.cpp" />
+    <ClCompile Include="..\..\decoder\src\Dithering.cpp" />
+    <ClCompile Include="..\..\decoder\src\EntropyDecoder.cpp" />
+    <ClCompile Include="..\..\decoder\src\Expand.cpp" />
+    <ClCompile Include="..\..\decoder\src\HuffmanDecoder.cpp" />
+    <ClCompile Include="..\..\decoder\src\InverseQuantize.cpp" />
+    <ClCompile Include="..\..\decoder\src\InverseTransformDD.cpp" />
+    <ClCompile Include="..\..\decoder\src\InverseTransformDDS.cpp" />
+    <ClCompile Include="..\..\decoder\src\InverseTransformDDS_1D.cpp" />
+    <ClCompile Include="..\..\decoder\src\InverseTransformDD_1D.cpp" />
+    <ClCompile Include="..\..\decoder\src\PredictedResidual.cpp" />
+    <ClCompile Include="..\..\decoder\src\Probe.cpp" />
+    <ClCompile Include="..\..\decoder\src\ScanEnhancement.cpp" />
+    <ClCompile Include="..\..\decoder\src\TemporalDecode.cpp" />
+    <ClCompile Include="..\..\decoder\src\Upsampling.cpp" />
+    <ClCompile Include="..\..\decoder\src\Conform.cpp" />
+    <ClCompile Include="..\..\encoder\src\Crop.cpp" />
+    <ClCompile Include="..\..\encoder\src\Compare.cpp" />
+    <ClCompile Include="..\..\encoder\src\Downsampling.cpp" />
+    <ClCompile Include="..\..\encoder\src\Encoder.cpp" />
+    <ClCompile Include="..\..\encoder\src\EntropyEncoder.cpp" />
+    <ClCompile Include="..\..\encoder\src\FileEncoder.cpp" />
+    <ClCompile Include="..\..\encoder\src\HuffmanEncoder.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\encoder\src\LayerEncodeFlags.cpp" />
+    <ClCompile Include="..\..\encoder\src\ParameterDefaults.cpp" />
+    <ClCompile Include="..\..\encoder\src\PriorityConfiguration.cpp" />
+    <ClCompile Include="..\..\encoder\src\PriorityMap.cpp" />
+    <ClCompile Include="..\..\encoder\src\Quantize.cpp" />
+    <ClCompile Include="..\..\encoder\src\ResidualMap.cpp" />
+    <ClCompile Include="..\..\encoder\src\Serializer.cpp" />
+    <ClCompile Include="..\..\encoder\src\Subtract.cpp" />
+    <ClCompile Include="..\..\encoder\src\TemporalEncode.cpp" />
+    <ClCompile Include="..\..\encoder\src\TransformDD.cpp" />
+    <ClCompile Include="..\..\encoder\src\TransformDDS.cpp" />
+    <ClCompile Include="..\..\encoder\src\TransformDDS_1D.cpp" />
+    <ClCompile Include="..\..\encoder\src\TransformDD_1D.cpp" />
+    <ClCompile Include="..\..\src\ModelEncoderApp.cpp" />
+    <ClCompile Include="..\..\src\Types.cpp" />
+    <ClCompile Include="..\..\src\uBaseDecoder.cpp" />
+    <ClCompile Include="..\..\src\uBaseDecoderAVC.cpp" />
+    <ClCompile Include="..\..\src\uBaseDecoderHEVC.cpp" />
+    <ClCompile Include="..\..\src\uBaseDecoderEVC.cpp" />
+    <ClCompile Include="..\..\src\uBaseDecoderVVC.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\deps\base_vvc\include;$(SolutionDir)..\deps\base_vvc\minimum_VTM\source\Lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\deps\base_vvc\include;$(SolutionDir)..\deps\base_vvc\minimum_VTM\source\Lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\deps\base_vvc\include;$(SolutionDir)..\deps\base_vvc\minimum_VTM\source\Lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\deps\base_vvc\include;$(SolutionDir)..\deps\base_vvc\minimum_VTM\source\Lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\src\uESFile.cpp" />
+    <ClCompile Include="..\..\src\uString.cpp" />
+    <ClCompile Include="..\..\src\uYUVDesc.cpp" />
+    <ClCompile Include="..\..\util\src\BitstreamPacker.cpp" />
+    <ClCompile Include="..\..\util\src\BitstreamStatistic.cpp" />
+    <ClCompile Include="..\..\util\src\BitstreamUnpacker.cpp" />
+    <ClCompile Include="..\..\util\src\Buffer.cpp" />
+    <ClCompile Include="..\..\util\src\Component.cpp" />
+    <ClCompile Include="..\..\util\src\Diagnostics.cpp" />
+    <ClCompile Include="..\..\util\src\Image.cpp" />
+    <ClCompile Include="..\..\util\src\LcevcMd5.cpp" />
+    <ClCompile Include="..\..\util\src\Misc.cpp" />
+    <ClCompile Include="..\..\util\src\Packet.cpp" />
+    <ClCompile Include="..\..\util\src\Parameters.cpp" />
+    <ClCompile Include="..\..\util\src\Surface.cpp" />
+    <ClCompile Include="..\..\util\src\YUVReader.cpp" />
+    <ClCompile Include="..\..\util\src\YUVWriter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\decoder\include\Add.hpp" />
+    <ClInclude Include="..\..\decoder\include\BaseVideoDecoder.hpp" />
+    <ClInclude Include="..\..\decoder\include\Convert.hpp" />
+    <ClInclude Include="..\..\decoder\include\Deblocking.hpp" />
+    <ClInclude Include="..\..\decoder\include\Decoder.hpp" />
+    <ClInclude Include="..\..\decoder\include\Deserializer.hpp" />
+    <ClInclude Include="..\..\decoder\include\Dimensions.hpp" />
+    <ClInclude Include="..\..\decoder\include\Dithering.hpp" />
+    <ClInclude Include="..\..\decoder\include\EntropyDecoder.hpp" />
+    <ClInclude Include="..\..\decoder\include\HuffmanDecoder.hpp" />
+    <ClInclude Include="..\..\decoder\include\InverseQuantize.hpp" />
+    <ClInclude Include="..\..\decoder\include\InverseTransformDD.hpp" />
+    <ClInclude Include="..\..\decoder\include\InverseTransformDDS.hpp" />
+    <ClInclude Include="..\..\decoder\include\InverseTransformDDS_1D.hpp" />
+    <ClInclude Include="..\..\decoder\include\InverseTransformDD_1D.hpp" />
+    <ClInclude Include="..\..\decoder\include\PredictedResidual.hpp" />
+    <ClInclude Include="..\..\decoder\include\ResidualMap.hpp" />
+    <ClInclude Include="..\..\decoder\include\SignaledConfiguration.hpp" />
+    <ClInclude Include="..\..\decoder\include\TemporalDecode.hpp" />
+    <ClInclude Include="..\..\decoder\include\Upsampling.hpp" />
+    <ClInclude Include="..\..\decoder\include\Conform.hpp" />
+    <ClInclude Include="..\..\encoder\include\Crop.hpp" />
+    <ClInclude Include="..\..\encoder\include\Compare.hpp" />
+    <ClInclude Include="..\..\encoder\include\Downsampling.hpp" />
+    <ClInclude Include="..\..\encoder\include\Encoder.hpp" />
+    <ClInclude Include="..\..\encoder\include\EncoderConfiguration.hpp" />
+    <ClInclude Include="..\..\encoder\include\EntropyEncoder.hpp" />
+    <ClInclude Include="..\..\encoder\include\FileEncoder.hpp" />
+    <ClInclude Include="..\..\encoder\include\HuffmanEncoder.hpp" />
+    <ClInclude Include="..\..\encoder\include\LayerEncodeFlags.hpp" />
+    <ClInclude Include="..\..\encoder\include\PriorityConfiguration.hpp" />
+    <ClInclude Include="..\..\encoder\include\PriorityMap.hpp" />
+    <ClInclude Include="..\..\encoder\include\Quantize.hpp" />
+    <ClInclude Include="..\..\encoder\include\ResidualMap.hpp" />
+    <ClInclude Include="..\..\encoder\include\Serializer.hpp" />
+    <ClInclude Include="..\..\encoder\include\Subtract.hpp" />
+    <ClInclude Include="..\..\encoder\include\TemporalEncode.hpp" />
+    <ClInclude Include="..\..\encoder\include\TransformDD.hpp" />
+    <ClInclude Include="..\..\encoder\include\TransformDDS.hpp" />
+    <ClInclude Include="..\..\encoder\include\TransformDDS_1D.hpp" />
+    <ClInclude Include="..\..\encoder\include\TransformDD_1D.hpp" />
+    <ClInclude Include="..\..\src\Config.hpp" />
+    <ClInclude Include="..\..\src\Types.hpp" />
+    <ClInclude Include="..\..\src\uBaseDecoder.h" />
+    <ClInclude Include="..\..\src\uBaseDecoderAVC.h" />
+    <ClInclude Include="..\..\src\uBaseDecoderHEVC.h" />
+    <ClInclude Include="..\..\src\uBaseDecoderEVC.h" />
+    <ClInclude Include="..\..\src\uBaseDecoderVVC.h" />
+    <ClInclude Include="..\..\src\uEnumMap.h" />
+    <ClInclude Include="..\..\src\uESFile.h" />
+    <ClInclude Include="..\..\src\uPlatform.h" />
+    <ClInclude Include="..\..\src\uString.h" />
+    <ClInclude Include="..\..\src\uTypes.h" />
+    <ClInclude Include="..\..\src\uTypeTraits.h" />
+    <ClInclude Include="..\..\src\uYUVDesc.h" />
+    <ClInclude Include="..\..\util\include\BitstreamPacker.hpp" />
+    <ClInclude Include="..\..\util\include\BitstreamStatistic.hpp" />
+    <ClInclude Include="..\..\util\include\BitstreamUnpacker.hpp" />
+    <ClInclude Include="..\..\util\include\Buffer.hpp" />
+    <ClInclude Include="..\..\util\include\Component.hpp" />
+    <ClInclude Include="..\..\util\include\Diagnostics.hpp" />
+    <ClInclude Include="..\..\util\include\Image.hpp" />
+    <ClInclude Include="..\..\util\include\LcevcMd5.hpp" />
+    <ClInclude Include="..\..\util\include\Misc.hpp" />
+    <ClInclude Include="..\..\util\include\Packet.hpp" />
+    <ClInclude Include="..\..\util\include\Parameters.hpp" />
+    <ClInclude Include="..\..\util\include\Platform.hpp" />
+    <ClInclude Include="..\..\util\include\Surface.hpp" />
+    <ClInclude Include="..\..\util\include\SurfaceImpl.hpp" />
+    <ClInclude Include="..\..\util\include\YUVReader.hpp" />
+    <ClInclude Include="..\..\util\include\YUVWriter.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{A890F4D6-5C42-4650-AC34-0DB6BD01B681}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ModelEncoder</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\encoder\include;$(SolutionDir)..\decoder\include;$(SolutionDir)..\util\include;$(SolutionDir)..\src;$(SolutionDir)..\deps\cxxopts\include;$(SolutionDir)..\deps\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(SolutionDir)\$(Platform)\$(Configuration)\AvcDec\AvcDec.lib;$(SolutionDir)\$(Platform)\$(Configuration)\HvcCom\HvcCom.lib;$(SolutionDir)\$(Platform)\$(Configuration)\HvcDec\HvcDec.lib;$(SolutionDir)\$(Platform)\$(Configuration)\MinimumVvcCom\MinimumVvcCom.lib;$(SolutionDir)\$(Platform)\$(Configuration)\MinimumVvcDec\MinimumVvcDec.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN64;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\encoder\include;$(SolutionDir)..\decoder\include;$(SolutionDir)..\util\include;$(SolutionDir)..\src;$(SolutionDir)..\deps\cxxopts\include;$(SolutionDir)..\deps\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(SolutionDir)\$(Platform)\$(Configuration)\AvcDec\AvcDec.lib;$(SolutionDir)\$(Platform)\$(Configuration)\HvcCom\HvcCom.lib;$(SolutionDir)\$(Platform)\$(Configuration)\HvcDec\HvcDec.lib;$(SolutionDir)\$(Platform)\$(Configuration)\MinimumVvcCom\MinimumVvcCom.lib;$(SolutionDir)\$(Platform)\$(Configuration)\MinimumVvcDec\MinimumVvcDec.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\encoder\include;$(SolutionDir)..\decoder\include;$(SolutionDir)..\util\include;$(SolutionDir)..\src;$(SolutionDir)..\deps\cxxopts\include;$(SolutionDir)..\deps\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SolutionDir)\$(Platform)\$(Configuration)\AvcDec\AvcDec.lib;$(SolutionDir)\$(Platform)\$(Configuration)\HvcCom\HvcCom.lib;$(SolutionDir)\$(Platform)\$(Configuration)\HvcDec\HvcDec.lib;$(SolutionDir)\$(Platform)\$(Configuration)\MinimumVvcCom\MinimumVvcCom.lib;$(SolutionDir)\$(Platform)\$(Configuration)\MinimumVvcDec\MinimumVvcDec.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\encoder\include;$(SolutionDir)..\decoder\include;$(SolutionDir)..\util\include;$(SolutionDir)..\src;$(SolutionDir)..\deps\cxxopts\include;$(SolutionDir)..\deps\json\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SolutionDir)\$(Platform)\$(Configuration)\AvcDec\AvcDec.lib;$(SolutionDir)\$(Platform)\$(Configuration)\HvcCom\HvcCom.lib;$(SolutionDir)\$(Platform)\$(Configuration)\HvcDec\HvcDec.lib;$(SolutionDir)\$(Platform)\$(Configuration)\MinimumVvcCom\MinimumVvcCom.lib;$(SolutionDir)\$(Platform)\$(Configuration)\MinimumVvcDec\MinimumVvcDec.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,13 @@
+{
+	"debug_write_surfaces": false,
+	"mfilter_enabled": false,
+	"mfilter_strength1": 0,
+	"mfilter_strength2": 0, 
+	"rate_control_mode": "cq",
+	"residual_mode_enabled": false,
+	"residual_mode_priority_enabled": false,
+	"temporal_use_priority_map": false,
+	"dc_dithering_type": "none",
+	"simd_type" : "none",
+	"debug_print_config": false
+}

@@ -1,0 +1,12 @@
+[submodule "deps/base_avc/JM"]
+	path = deps/base_avc/JM
+	url = https://gitlab.com/v-nova-public/JM.git
+[submodule "deps/base_hevc/HM"]
+	path = deps/base_hevc/HM
+	url = https://gitlab.com/v-nova-public/HM.git
+[submodule "deps/base_vvc/VTM"]
+	path = deps/base_vvc/VTM
+	url = https://gitlab.com/v-nova-public/VTM.git
+[submodule "deps/base_evc/ETM"]
+	path = deps/base_evc/ETM
+	url = https://gitlab.com/v-nova-public/ETM.git

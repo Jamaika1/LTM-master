@@ -1,0 +1,2 @@
+input_file,base_encoder,base,base_recon,limit,cq_step_width_loq_1,cq_step_width_loq_0,qp,dithering_control,encapsulation,checksum
+Cactus_50frames_1920x1080_50fps_8bit_420p.yuv,avc,Cactus_50frames_base_qp19_960x540.bin,Cactus_50frames_base_qp19_960x540.yuv,10,32768,1000,35,FALSE,nal,c8f1751cc843e070fa029d5794941a0c

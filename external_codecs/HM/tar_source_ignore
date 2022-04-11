@@ -1,0 +1,13 @@
+TAppDecoder
+TAppDecoder.exe
+TAppDecoder_HighBitdepth
+TAppDecoder_HighBitdepth.exe
+TAppDecoder.ilk
+TAppDecoder.pdb
+TAppEncoder
+TAppEncoder.exe
+TAppEncoder_HighBitdepth
+TAppEncoder_HighBitdepth.exe
+TAppEncoder.ilk
+TAppEncoder.pdb
+tar_source_ignore

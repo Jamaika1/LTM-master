@@ -1,0 +1,66 @@
+# Makefile.w64
+#
+
+##
+#
+TARGETS=ModelDecoder.exe ModelEncoder.exe
+all: $(TARGETS)
+
+OBJ:=.obj
+EXE:=.exe
+OBJSDIR=objs_w64
+
+PYTHON=python
+
+# Cross platform definitions
+#
+include Makefile.common
+
+# Compile
+#
+CXX=cl
+CXXFLAGS=-nologo -Oi -O2 -EHsc -MT -Gy -GS- -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -DNOMINMAX -DWIN64 $(DEFINES) $(INCLUDES)
+
+CC=cl
+CFLAGS=-nologo -Oi -O2 -MT -Gy -GS- -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE -DNOMINMAX -DWIN64 $(DEFINES) $(INCLUDES)
+
+# Link
+#
+LD=link
+LDFLAGS=-nologo
+LDLIBS=WS2_32.Lib
+
+ModelDecoder.exe: version $(DECODER_ALL_OBJS)
+	$(LD) -out:$@ $(LDFLAGS) $(DECODER_ALL_OBJS) $(LDLIBS)
+
+ModelEncoder.exe: version $(ENCODER_ALL_OBJS)
+	$(LD) -out:$@ $(LDFLAGS) $(ENCODER_ALL_OBJS) $(LDLIBS)
+
+ModelTest.exe: version $(TEST_ALL_OBJS)
+	$(LD) -out:$@ $(LDFLAGS) $(TEST_ALL_OBJS) $(LDLIBS)
+
+$(OBJSDIR)/git_version.h: version
+
+#
+$(OBJSDIR)/%.obj: %.cpp
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) -c -Fo$@ $<
+
+$(OBJSDIR)/%.obj: %.c
+	@mkdir -p $(@D)
+	$(CC) $(CFLAGS) -c -Fo$@ $<
+
+$(OBJSDIR):
+	mkdir $(OBJSDIR)
+
+version:
+	@mkdir -p $(OBJSDIR)
+	@echo \#define GIT_VERSION \"$(shell git describe --always --long --tags)\" >$(OBJSDIR)/_git_version.h
+	@diff -q $(OBJSDIR)/_git_version.h $(OBJSDIR)/git_version.h > /dev/null || cp $(OBJSDIR)/_git_version.h $(OBJSDIR)/git_version.h
+
+clean:
+	-rm -rf $(TARGETS) $(OBJSDIR) $(PACKED_SHADERS)
+
+-include $(OBJSDIR)/*.d
+
+.PHONY: all shaders clean version

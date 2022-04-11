@@ -1,0 +1,5 @@
+input_file,base_encoder,encapsulation,base,base_recon,limit,cq_step_width_loq_1,cq_step_width_loq_0,qp,temporal_enabled,tile_width,tile_height,checksum
+Cactus_50frames_1920x1080_50fps_8bit_420p.yuv,avc,nal,Cactus_50frames_base_qp19_960x540.bin,Cactus_50frames_base_qp19_960x540.yuv,50,300,1000,28,TRUE,0,0,fd182f0eb2b9b5c7608ef42bee10eb70
+Cactus_50frames_1920x1080_50fps_8bit_420p.yuv,avc,nal,Cactus_50frames_base_qp19_960x540.bin,Cactus_50frames_base_qp19_960x540.yuv,50,300,1000,28,FALSE,0,0,93a2c1ad607726224c523ebb5a337730
+Cactus_50frames_1920x1080_50fps_8bit_420p.yuv,avc,nal,Cactus_50frames_base_qp19_960x540.bin,Cactus_50frames_base_qp19_960x540.yuv,50,300,1000,28,TRUE,512,256,fd182f0eb2b9b5c7608ef42bee10eb70
+Cactus_50frames_1920x1080_50fps_8bit_420p.yuv,avc,nal,Cactus_50frames_base_qp19_960x540.bin,Cactus_50frames_base_qp19_960x540.yuv,50,300,1000,28,FALSE,512,256,93a2c1ad607726224c523ebb5a337730

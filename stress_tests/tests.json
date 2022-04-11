@@ -1,0 +1,1304 @@
+[
+	{
+		"description": "Main Profile Tool Set",
+		"name": "MP_SET-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {},
+		"sets": [
+			"default",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Transform Type",
+		"name": "TT-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"encoding_transform_type": "dd"
+		},
+		"sets": [
+			"tranform",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Upsampling, Nearest",
+		"name": "UPS-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"encoding_upsample": "nearest"
+		},
+		"sets": [
+			"upsampling",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Upsampling, Bilinear",
+		"name": "UPS-2",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"encoding_upsample": "linear"
+		},
+		"sets": [
+			"upsampling",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Upsampling, Cubic",
+		"name": "UPS-3",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"encoding_upsample": "cubic"
+		},
+		"sets": [
+			"upsampling",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Upsampling, Modified Cubic",
+		"name": "UPS-4",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"encoding_upsample": "modifiedcubic"
+		},
+		"sets": [
+			"upsampling",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Upsampling, Adaptive Cubic",
+		"name": "UPS-5",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"encoding_upsample": "adaptivecubic",
+			"upsampling_coefficients": "3048,5144,4144,1048"
+		},
+		"sets": [
+			"upsampling",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Offsets/Modes, default/0",
+		"name": "QUANT-1-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"dequant_offset_mode": "default",
+			"dequant_offset_signalled": true,
+			"dequant_offset": 0
+		},
+		"sets": [
+			"quantization",
+			"dequant_offset",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Offsets/Modes, default/30",
+		"name": "QUANT-1-2",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"dequant_offset_mode": "default",
+			"dequant_offset_signalled": true,
+			"dequant_offset": 30
+		},
+		"sets": [
+			"quantization",
+			"dequant_offset",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Offsets/Modes, default/64",
+		"name": "QUANT-1-3",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"dequant_offset_mode": "default",
+			"dequant_offset_signalled": true,
+			"dequant_offset": 64
+		},
+		"sets": [
+			"quantization",
+			"dequant_offset",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Offsets/Modes, const_offset/10",
+		"name": "QUANT-1-4",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"dequant_offset_mode": "const_offset",
+			"dequant_offset_signalled": true,
+			"dequant_offset": 10
+		},
+		"sets": [
+			"quantization",
+			"dequant_offset",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Offsets/Modes, const_offset/40",
+		"name": "QUANT-1-5",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"dequant_offset_mode": "const_offset",
+			"dequant_offset_signalled": true,
+			"dequant_offset": 40
+		},
+		"sets": [
+			"quantization",
+			"dequant_offset",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Offsets/Modes, const_offset/72",
+		"name": "QUANT-1-6",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"dequant_offset_mode": "const_offset",
+			"dequant_offset_signalled": true,
+			"dequant_offset": 72
+		},
+		"sets": [
+			"quantization",
+			"dequant_offset",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Temporal Step Width Modifier, 10",
+		"name": "QUANT-2-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"temporal_step_width_modifier": 10
+		},
+		"sets": [
+			"quantization",
+			"temporal_step_width_modifier",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Temporal Step Width Modifier, 20",
+		"name": "QUANT-2-2",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"temporal_step_width_modifier": 20
+		},
+		"sets": [
+			"quantization",
+			"temporal_step_width_modifier",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Temporal Step Width Modifier, 30",
+		"name": "QUANT-2-3",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"temporal_step_width_modifier": 30
+		},
+		"sets": [
+			"quantization",
+			"temporal_step_width_modifier",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Chroma Step Width Multiplier, 15",
+		"name": "QUANT-3-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"num_processed_planes": 3,
+			"chroma_step_width_multiplier": 15
+		},
+		"sets": [
+			"quantization",
+			"chroma_step_width_multiplier",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "conf",
+		"configuration_check": "",
+		"version": 5
+	},
+	{
+		"description": "Quantization, Chroma Step Width Multiplier, 35",
+		"name": "QUANT-3-2",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"num_processed_planes": 3,
+			"chroma_step_width_multiplier": 35
+		},
+		"sets": [
+			"quantization",
+			"chroma_step_width_multiplier",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "conf",
+		"configuration_check": "",
+		"version": 5
+	},
+	{
+		"description": "Quantization, Chroma Step Width Multiplier, 45",
+		"name": "QUANT-3-3",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"num_processed_planes": 3,
+			"chroma_step_width_multiplier": 45
+		},
+		"sets": [
+			"quantization",
+			"chroma_step_width_multiplier",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "conf",
+		"configuration_check": "",
+		"version": 5
+	},
+	{
+		"description": "Quantization, Matrix, BothDefault",
+		"name": "QUANT-4-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"cq_step_width_loq_1": 2000,
+			"quant_matrix_mode": "default"
+		},
+		"sets": [
+			"quantization",
+			"quant_matrix",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Matrix, SameAndCustom",
+		"name": "QUANT-4-2",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"cq_step_width_loq_1": 2000,
+			"quant_matrix_mode": "custom",
+			"qm_coefficient_2": "10,21,15,35,55,2,77,8,25,82,0,4,160,80,80,21"
+		},
+		"sets": [
+			"quantization",
+			"quant_matrix",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Matrix, Level2CustomLevel1Default",
+		"name": "QUANT-4-3",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"cq_step_width_loq_1": 2000,
+			"quant_matrix_mode": "custom_default",
+			"qm_coefficient_2": "10,21,15,35,55,2,77,8,25,82,0,4,160,80,80,21"
+		},
+		"sets": [
+			"quantization",
+			"quant_matrix",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Matrix, Level2DefaultLevel1Custom",
+		"name": "QUANT-4-4",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"cq_step_width_loq_1": 2000,
+			"quant_matrix_mode": "default_custom",
+			"qm_coefficient_1": "10,21,15,35,55,2,77,8,25,82,0,4,160,80,80,21"
+		},
+		"sets": [
+			"quantization",
+			"quant_matrix",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Matrix, DifferentAndCustom",
+		"name": "QUANT-4-5",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"cq_step_width_loq_1": 2000,
+			"quant_matrix_mode": "custom_custom",
+			"qm_coefficient_1": "10,21,15,35,55,2,77,8,25,82,0,4,160,80,80,21",
+			"qm_coefficient_2": "11,22,16,34,56,1,76,9,24,81,0,5,161,81,81,20"
+		},
+		"sets": [
+			"quantization",
+			"quant_matrix",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Step Width 0, 16",
+		"name": "QUANT-5-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"cq_step_width_loq_0": 16
+		},
+		"sets": [
+			"quantization",
+			"step_width",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Step Width 0, 800",
+		"name": "QUANT-5-2",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"cq_step_width_loq_0": 800
+		},
+		"sets": [
+			"quantization",
+			"step_width",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Step Width 0, 1000",
+		"name": "QUANT-5-3",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"cq_step_width_loq_0": 1000
+		},
+		"sets": [
+			"quantization",
+			"step_width",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Step Width 0, 2000",
+		"name": "QUANT-5-4",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"cq_step_width_loq_0": 2000
+		},
+		"sets": [
+			"quantization",
+			"step_width",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Quantization, Step Width 0, 3000",
+		"name": "QUANT-5-5",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"cq_step_width_loq_0": 3000
+		},
+		"sets": [
+			"quantization",
+			"step_width",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Zero-MV Temporal Prediction, Off",
+		"name": "ZMTP-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"temporal_enabled": false
+		},
+		"sets": [
+			"temporal_prediction",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Zero-MV Temporal Prediction, On",
+		"name": "ZMTP-2",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"temporal_enabled": true
+		},
+		"sets": [
+			"temporal_prediction",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Reduced Signalling, Off",
+		"name": "RS-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"temporal_use_reduced_signalling": false
+		},
+		"sets": [
+			"reduced_signalling",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Reduced Signalling, On",
+		"name": "RS-2",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"temporal_use_reduced_signalling": true
+		},
+		"sets": [
+			"reduced_signalling",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Predicted Residuals, Off",
+		"name": "PR-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"predicted_residual": false
+		},
+		"sets": [
+			"predicted_residuals",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Predicted Residuals, On",
+		"name": "PR-2",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"predicted_residual": true
+		},
+		"sets": [
+			"predicted_residuals",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "L-1 Filter, Off",
+		"name": "L1D-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"cq_step_width_loq_1": 100,
+			"level_1_filtering_enabled": false
+		},
+		"sets": [
+			"l1_filter",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "L-1 Filter, On",
+		"name": "L1D-2",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"cq_step_width_loq_1": 100,
+			"level_1_filtering_enabled": true,
+			"level_1_filtering_first_coefficient": 8,
+			"level_1_filtering_second_coefficient": 10
+		},
+		"sets": [
+			"l1_filter",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Tiling Decoding, 512x256, entropy compressed, size not compressed",
+		"name": "TD-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"tile_width": 512,
+			"tile_height": 256,
+			"compression_type_entropy_enabled_per_tile": true
+		},
+		"sets": [
+			"tiling_decoding",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Tiling Decoding, 512x256, entropy not compressed, size not compressed",
+		"name": "TD-2",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"tile_width": 512,
+			"tile_height": 256,
+			"compression_type_entropy_enabled_per_tile": false
+		},
+		"sets": [
+			"tiling_decoding",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Tiling Decoding, 1024x512, entropy compressed, size prefix compressed",
+		"name": "TD-3",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"tile_width": 1024,
+			"tile_height": 512,
+			"compression_type_entropy_enabled_per_tile": true,
+			"compression_type_size_per_tile": "prefix"
+		},
+		"sets": [
+			"tiling_decoding",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Tiling Decoding, 256x256, entropy not compressed, size prefix compressed",
+		"name": "TD-4",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"tile_width": 256,
+			"tile_height": 256,
+			"compression_type_entropy_enabled_per_tile": false,
+			"compression_type_size_per_tile": "prefix"
+		},
+		"sets": [
+			"tiling_decoding",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Tiling Decoding, 1024x1024, entropy compressed, size prefix_diff compressed",
+		"name": "TD-5",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"tile_width": 1024,
+			"tile_height": 1024,
+			"compression_type_entropy_enabled_per_tile": true,
+			"compression_type_size_per_tile": "prefix_diff"
+		},
+		"sets": [
+			"tiling_decoding",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Tiling Decoding, 256x1024, entropy not compressed, size prefix_diff compressed",
+		"name": "TD-6",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"tile_width": 256,
+			"tile_height": 1024,
+			"compression_type_entropy_enabled_per_tile": false,
+			"compression_type_size_per_tile": "prefix_diff"
+		},
+		"sets": [
+			"tiling_decoding",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 1
+	},
+	{
+		"description": "Scaling Mode, None/None",
+		"name": "SD-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"scaling_mode_level1": "none",
+			"scaling_mode_level2": "none"
+		},
+		"sets": [
+			"scaling_mode",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "none_none",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Scaling Mode, None/2D",
+		"name": "SD-2",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"scaling_mode_level1": "none",
+			"scaling_mode_level2": "2d"
+		},
+		"sets": [
+			"scaling_mode",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Scaling Mode, 1D/1D",
+		"name": "SD-3",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"scaling_mode_level1": "1d",
+			"scaling_mode_level2": "1d"
+		},
+		"sets": [
+			"scaling_mode",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "1d_1d",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Scaling Mode, 1D/2D",
+		"name": "SD-4",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"scaling_mode_level1": "1d",
+			"scaling_mode_level2": "2d"
+		},
+		"sets": [
+			"scaling_mode",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "1d_2d",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Scaling Mode, 2D/2D",
+		"name": "SD-5",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"scaling_mode_level1": "2d",
+			"scaling_mode_level2": "2d"
+		},
+		"sets": [
+			"scaling_mode",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "2d_2d",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Relative Bit Depth, base 8bit, enhancement 10+bit, Level 1 Depth Off",
+		"name": "RBD-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"base_depth": 8,
+			"level1_depth_flag": false
+		},
+		"sets": [
+			"relative_bit_depth",
+			"stress_10bit",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "10+bit",
+		"base": "8bit",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Relative Bit Depth, base 8bit, enhancement 10+bit, Level 1 Depth On",
+		"name": "RBD-2",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"base_depth": 8,
+			"level1_depth_flag": true
+		},
+		"sets": [
+			"relative_bit_depth",
+			"stress_10bit",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "10+bit",
+		"base": "8bit",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Relative Bit Depth, base 10bit, enhancement 12+bit, Level 1 Depth Off",
+		"name": "RBD-3",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"base_depth": 10,
+			"level1_depth_flag": false
+		},
+		"sets": [
+			"relative_bit_depth",
+			"stress_12bit",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "12+bit",
+		"base": "10bit",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Relative Bit Depth, base 10bit, enhancement 12+bit, Level 1 Depth On",
+		"name": "RBD-4",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"base_depth": 10,
+			"level1_depth_flag": true
+		},
+		"sets": [
+			"relative_bit_depth",
+			"stress_12bit",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "12+bit",
+		"base": "10bit",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Enhancement Colour Space",
+		"name": "ECS-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"num_processed_planes": 3
+		},
+		"sets": [
+			"enhancement_colour",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "conf",
+		"configuration_check": "",
+		"version": 5
+	},
+	{
+		"description": "No Enhancement Signalling",
+		"name": "ECS-2",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"cq_step_width_loq_1": 32767,
+			"cq_step_width_loq_0": 32767,
+			"temporal_enabled": false
+		},
+		"sets": [
+			"enhancement_colour",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "User Data, 2bits, layer1 Off",
+		"name": "HDUD-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"user_data_enabled": "2bits",
+			"user_data_method": "fixed_random"
+		},
+		"sets": [
+			"user_data",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "User Data, 2bits, layer1 On",
+		"name": "HDUD-2",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"user_data_enabled": "2bits",
+			"user_data_method": "fixed_random",
+			"cq_step_width_loq_1": 1000
+		},
+		"sets": [
+			"user_data",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "User Data, 6bits, layer1 Off",
+		"name": "HDUD-3",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"user_data_enabled": "6bits",
+			"user_data_method": "fixed_random"
+		},
+		"sets": [
+			"user_data",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "User Data, 6bits, layer1 On",
+		"name": "HDUD-4",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"user_data_enabled": "6bits",
+			"user_data_method": "fixed_random",
+			"cq_step_width_loq_1": 1000
+		},
+		"sets": [
+			"user_data",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Conformance Window, Left",
+		"name": "CONF-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"conformance_window": true,
+			"conf_win_left_offset": 2
+		},
+		"sets": [
+			"conformance_window",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Conformance Window, Right",
+		"name": "CONF-2",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"conformance_window": true,
+			"conf_win_right_offset": 2
+		},
+		"sets": [
+			"conformance_window",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Conformance Window, Top",
+		"name": "CONF-3",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"conformance_window": true,
+			"conf_win_top_offset": 2
+		},
+		"sets": [
+			"conformance_window",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Conformance Window, Bottom",
+		"name": "CONF-4",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"conformance_window": true,
+			"conf_win_bottom_offset": 2
+		},
+		"sets": [
+			"conformance_window",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Chroma Sampling Type, Monochrome",
+		"name": "CST-1",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"format": "y"
+		},
+		"sets": [
+			"chroma_sampling_type",
+			"stress_mono",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "luma",
+		"base": "luma",
+		"configuration_check": "",
+		"version": 3
+	},
+	{
+		"description": "Chroma Sampling Type, 4:2:0 Format",
+		"name": "CST-2",
+		"include-parameters": "main_profile.json",
+		"parameters": {
+			"format": "yuv420p"
+		},
+		"sets": [
+			"chroma_sampling_type",
+			"stress",
+			"avc",
+			"hevc"
+		],
+		"checksums": {},
+		"input": "default",
+		"base": "default",
+		"configuration_check": "",
+		"version": 3
+	}
+]

@@ -1,0 +1,21 @@
+{
+    "avc": {
+        "base_encoder": "avc",
+        "width": 1920,
+        "height": 1080,
+        "sequences": [
+            "Cactus",
+            "CanYouReadThis"
+        ]
+    },
+    "hevc": {
+        "base_encoder": "hevc",
+        "width": 3840,
+        "height": 2160,
+        "sequences": [
+            "ParkRunning3_10bit",
+            "ParkRunning3_12bit",
+            "ParkRunning3_14bit"
+        ]
+    }
+}
