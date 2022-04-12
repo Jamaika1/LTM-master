@@ -1,0 +1,191 @@
+/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:215 (main) LTM [/home/pi303/wz/LTM-master/build/ModelEncoder] 8ecb624b17332a3e636aa70c211b01edf4ebf6ef
+parameter dump_surfaces BOOL        0
+parameter encoding_downsample_chroma STR  lanczos3
+parameter encoding_downsample_luma STR  lanczos3
+parameter encoding_transform_type STR  dds
+parameter encoding_upsample STR  modifiedcubic
+parameter predicted_residual BOOL        1
+parameter residual_mode_enabled BOOL        0
+parameter temporal_enabled BOOL        1
+parameter temporal_use_reduced_signalling BOOL        1
+QP                                    37
+width                               1920
+height                              1080
+num_processed_planes                   1
+/home/pi303/wz/LTM-master/encoder/src/Encoder.cpp:307 (update_global_configuration) additional    0 - type    0 - sei    0 - vui    0
+/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:441 (main) **** Enh. start            57828
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:204 (encode_file) Using temporary file for base YUV: _temp_00013217__base.yuv
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:205 (encode_file) Using temporary file for base stream: _temp_00013217__base.bin
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:206 (encode_file) Using temporary file for base recon: _temp_00013217__base_recon.yuv
+SW1                                32767
+SW2                                 1326
+transform                              4
+priority_mode                         20
+dequant_offset                        57
+temporal_cq_sw_multiplier            511
+temporal_step_width_modifier          29
+/home/pi303/wz/LTM-master/encoder/src/Encoder.cpp:335 (update_sequence_configuration) Using Main Profile with chroma_format_idc 1.
+/home/pi303/wz/LTM-master/encoder/src/Encoder.cpp:355 (update_sequence_configuration) Using Level 2.1
+PriorityConfiguration: MODE[mode_2_0] (0) PM SL-1[0] PM SL-2[1]
+PriorityConfiguration: PM SL-1 type[type_4] PM SL-1 num[4]
+PriorityConfiguration: PM SL-2 type[type_5] PM SL-2 num[5]
+#### #### encoding_transform_type    4
+#### #### num_processed_planes    1
+#### #### dequant_offset_mode    1
+#### #### dequant_offset    57
+#### #### temporal_cq_sw_multiplier  500
+#### #### temporal_step_width_modifier   29
+#### #### encoding_upsample    3
+#### #### upsampling_coefficients    0    0    0    0
+#### #### SW1 32767
+#### #### SW2 1326
+#### #### quant_matrix_mode    0
+#### #### qm_coefficient_1    0    0    0    0
+#### #### qm_coefficient_2    0    0    0    0
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:218 (encode_file) input limit       10 - local count       10
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:222 (encode_file) Writing base 0
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:222 (encode_file) Writing base 1
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:222 (encode_file) Writing base 2
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:222 (encode_file) Writing base 3
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:222 (encode_file) Writing base 4
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:222 (encode_file) Writing base 5
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:222 (encode_file) Writing base 6
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:222 (encode_file) Writing base 7
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:222 (encode_file) Writing base 8
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:222 (encode_file) Writing base 9
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:807 (run_base_encoder) Running: /home/pi303/wz/LTM-master/build/external_codecs/HM/TAppEncoder -c /home/pi303/wz/LTM-master/build/external_codecs/HM/encoder_randomaccess_main10.cfg --InputFile=_temp_00013217__base.yuv ---BitstreamFile=_temp_00013217__base.bin --ReconFile=_temp_00013217__base_recon.yuv --SourceWidth=960 --SourceHeight=540 --InputBitDepth=8 --OutputBitDepth=8 --InternalBitDepth=8 --FrameRate=50 --Level=4.1 --QP=37 --IntraPeriod=48 --FramesToBeEncoded=10 --ConformanceWindowMode=1 --InputChromaFormat=420
+******************************************************************
+** WARNING: --SEIDecodedPictureHash is now disabled by default. **
+**          Automatic verification of decoded pictures by a     **
+**          decoder requires this option to be enabled.         **
+******************************************************************
+
+HM software: Encoder Version [16.22] (including RExt)[Linux][GCC 10.2.1][64 bit] 
+
+
+Input          File                    : _temp_00013217__base.yuv
+Bitstream      File                    : _temp_00013217__base.bin
+Reconstruction File                    : _temp_00013217__base_recon.yuv
+Real     Format                        : 960x540 50Hz
+Internal Format                        : 960x544 50Hz
+Sequence PSNR output                   : Linear average only
+Sequence MSE output                    : Disabled
+Frame MSE output                       : Disabled
+MS-SSIM output                         : Disabled
+xPSNR calculation                      : Disabled
+Cabac-zero-word-padding                : Enabled
+Frame/Field                            : Frame based coding
+Frame index                            : 0 - 9 (10 frames)
+Profile                                : main10
+CU size / depth / total-depth          : 64 / 4 / 4
+RQT trans. size (min / max)            : 4 / 32
+Max RQT depth inter                    : 3
+Max RQT depth intra                    : 3
+Min PCM size                           : 8
+Motion search range                    : 384
+Intra period                           : 48
+Decoding refresh type                  : 1
+QP                                     : 37
+Max dQP signaling depth                : 0
+Cb QP Offset                           : 0
+Cr QP Offset                           : 0
+QP adaptation                          : 0 (range=0)
+GOP size                               : 16
+Input bit depth                        : (Y:8, C:8)
+MSB-extended bit depth                 : (Y:8, C:8)
+Internal bit depth                     : (Y:8, C:8)
+PCM sample bit depth                   : (Y:8, C:8)
+Intra reference smoothing              : Enabled
+diff_cu_chroma_qp_offset_depth         : -1
+extended_precision_processing_flag     : Disabled
+implicit_rdpcm_enabled_flag            : Disabled
+explicit_rdpcm_enabled_flag            : Disabled
+transform_skip_rotation_enabled_flag   : Disabled
+transform_skip_context_enabled_flag    : Disabled
+cross_component_prediction_enabled_flag: Disabled
+high_precision_offsets_enabled_flag    : Disabled
+persistent_rice_adaptation_enabled_flag: Disabled
+cabac_bypass_alignment_enabled_flag    : Disabled
+log2_sao_offset_scale_luma             : 0
+log2_sao_offset_scale_chroma           : 0
+Cost function:                         : Lossy coding (default)
+RateControl                            : 0
+WPMethod                               : 0
+Max Num Merge Candidates               : 5
+
+TOOL CFG: IBD:0 HAD:1 RDQ:1 RDQTS:1 RDpenalty:0 LQP:0 SQP:0 ASR:1 MinSearchWindow:96 RestrictMESampling:0 FEN:1 ECU:0 FDM:1 CFM:0 ESD:0 RQT:1 TransformSkip:1 TransformSkipFast:1 TransformSkipLog2MaxSize:2 Slice: M=0 SliceSegment: M=0 CIP:0 SAO:1 PCM:0 TransQuantBypassEnabled:0 WPP:0 WPB:0 PME:2  WaveFrontSynchro:0 WaveFrontSubstreams:1 ScalingList:0 TMVPMode:1 AQpS:0 SignBitHidingFlag:1 RecalQP:0
+
+Non-environment-variable-controlled macros set as follows: 
+
+                                RExt__DECODER_DEBUG_BIT_STATISTICS =   0
+                                      RExt__HIGH_BIT_DEPTH_SUPPORT =   0
+                            RExt__HIGH_PRECISION_FORWARD_TRANSFORM =   0
+                                        O0043_BEST_EFFORT_DECODING =   0
+                                         ME_ENABLE_ROUNDING_OF_MVS =   1
+
+                   Input ChromaFormatIDC =   4:2:0
+       Output (internal) ChromaFormatIDC =   4:2:0
+
+POC    0 TId: 0 ( I-SLICE, nQP 34 QP 34 )      77216 bits [Y 37.3238 dB    U 40.9769 dB    V 40.0647 dB] [ET     6 ] [L0 ] [L1 ]
+POC    8 TId: 1 ( B-SLICE, nQP 41 QP 41 )      22888 bits [Y 34.5105 dB    U 40.4932 dB    V 39.1730 dB] [ET    19 ] [L0 0 ] [L1 0 ]
+POC    4 TId: 2 ( B-SLICE, nQP 44 QP 44 )      10832 bits [Y 33.8460 dB    U 40.5243 dB    V 38.6894 dB] [ET    18 ] [L0 0 8 ] [L1 8 0 ]
+POC    2 TId: 3 ( B-SLICE, nQP 45 QP 45 )       6520 bits [Y 34.1386 dB    U 40.6409 dB    V 38.8074 dB] [ET    17 ] [L0 0 4 ] [L1 4 8 ]
+POC    1 TId: 4 ( B-SLICE, nQP 46 QP 46 )       3656 bits [Y 34.5314 dB    U 40.7026 dB    V 39.2008 dB] [ET    14 ] [L0 0 2 ] [L1 2 4 ]
+POC    3 TId: 4 ( B-SLICE, nQP 46 QP 46 )       3704 bits [Y 33.7759 dB    U 40.4819 dB    V 38.6721 dB] [ET    17 ] [L0 2 0 ] [L1 4 8 ]
+POC    6 TId: 3 ( B-SLICE, nQP 45 QP 45 )       6856 bits [Y 33.4173 dB    U 40.3763 dB    V 38.4477 dB] [ET    18 ] [L0 4 0 ] [L1 8 4 ]
+POC    5 TId: 4 ( B-SLICE, nQP 46 QP 46 )       3112 bits [Y 33.3538 dB    U 40.4790 dB    V 38.4542 dB] [ET    17 ] [L0 4 0 ] [L1 6 8 ]
+POC    7 TId: 4 ( B-SLICE, nQP 46 QP 46 )       3344 bits [Y 33.5644 dB    U 40.4092 dB    V 38.6954 dB] [ET    14 ] [L0 6 4 ] [L1 8 6 ]
+POC    9 TId: 4 ( B-SLICE, nQP 46 QP 46 )       4392 bits [Y 33.3268 dB    U 40.0273 dB    V 38.4082 dB] [ET    17 ] [L0 8 0 ] [L1 8 0 ]
+
+
+SUMMARY --------------------------------------------------------
+	Total Frames |   Bitrate     Y-PSNR    U-PSNR    V-PSNR    YUV-PSNR  
+	       10    a     712.6000   34.1788   40.5112   38.8613   35.2479  
+
+
+I Slices--------------------------------------------------------
+	Total Frames |   Bitrate     Y-PSNR    U-PSNR    V-PSNR    YUV-PSNR  
+	        1    i    3860.8000   37.3238   40.9769   40.0647   38.1477  
+
+
+P Slices--------------------------------------------------------
+	Total Frames |   Bitrate     Y-PSNR    U-PSNR    V-PSNR    YUV-PSNR  
+	        0    p          nan       nan       nan       nan       nan  
+
+
+B Slices--------------------------------------------------------
+	Total Frames |   Bitrate     Y-PSNR    U-PSNR    V-PSNR    YUV-PSNR  
+	        9    b     362.8000   33.8294   40.4594   38.7276   35.0189  
+
+RVM: 0.000
+Bytes written to file: 17815 (712.600 kbps)
+
+ Total Time:      155.668 sec.
+/home/pi303/wz/LTM-master/encoder/src/Encoder.cpp:991 (encode) Dither init    0 bitdepth 8
+ENC. [pts.    0] [type    1] [base     9652] [enha     3148] [psnrY  33.9989] [psnrU  39.6014] [psnrV  38.8719] 
+[MD5Y F7E526895645CD354C85188514D9DA97] [MD5U 33A3EDCDC24AD948D3ABD806D4DE0304] [MD5V A92777ECB193F165A1BA92F1F41C95E7] 
+ENC. [pts.    1] [type    3] [base      457] [enha     1500] [psnrY  32.2872] [psnrU  39.4166] [psnrV  38.1957] 
+[MD5Y A60FB64F5E0EB4E17B2547DF7711EE25] [MD5U 7684F78DD4DED0D17E987397FAAEC517] [MD5V BC970A50DCA9931E6F95AF11CE6225D1] 
+ENC. [pts.    2] [type    3] [base      815] [enha     1589] [psnrY  32.0332] [psnrU  39.3716] [psnrV  37.8813] 
+[MD5Y 224DBE6BF0D3AB3215896BF37202A2BE] [MD5U DA8EC9955C469733970BF6126AD16F5C] [MD5V E223BC2192265F6ED9213865887C387B] 
+ENC. [pts.    3] [type    3] [base      463] [enha     1492] [psnrY  31.8140] [psnrU  39.2520] [psnrV  37.7839] 
+[MD5Y C439B7814B519ED1790B866A1A4B5385] [MD5U 3297193777D05C305C06815AF2AF27C1] [MD5V DAA2784DC3B6DB78E38984993F80FF0B] 
+ENC. [pts.    4] [type    3] [base     1354] [enha     1447] [psnrY  31.8544] [psnrU  39.2844] [psnrV  37.8119] 
+[MD5Y 9F67FFC781DCA219BE3F99EE9C76071B] [MD5U 5D4D6D9F48D5D7B687AC9B446235F237] [MD5V 63CD396504E5E4F968A82E09556EF0D3] 
+ENC. [pts.    5] [type    3] [base      389] [enha     1485] [psnrY  31.5453] [psnrU  39.2668] [psnrV  37.6247] 
+[MD5Y 0458D68F749549771A31CA5FC341544D] [MD5U 66825D842F6E72C2B199BB688A649C1B] [MD5V D7F5927282F8EAAFD0D2E5B5C2F8B14B] 
+ENC. [pts.    6] [type    3] [base      857] [enha     1474] [psnrY  31.5818] [psnrU  39.1858] [psnrV  37.5994] 
+[MD5Y E42A7E7A8A41E3FCF0699D590DEF01AD] [MD5U 37F49AFA4CAE400CBA7B1B704CDF254C] [MD5V 1FA2C24DDCF3B18624ACBF7C66BC4E05] 
+ENC. [pts.    7] [type    3] [base      418] [enha     1495] [psnrY  31.7263] [psnrU  39.2167] [psnrV  37.8193] 
+[MD5Y FAAF62631F84DA7E735FF4D25EECD840] [MD5U 9C3DD53049CEE7E2ABF9B80CC4C919F8] [MD5V 231E77C23B582CB837E664047D151832] 
+ENC. [pts.    8] [type    3] [base     2861] [enha     1175] [psnrY  32.1608] [psnrU  39.2850] [psnrV  38.2081] 
+[MD5Y D140C803FE34D46F9D490005E89FEBF1] [MD5U 9ADB775066AB7E761903892C6BCC366B] [MD5V 86302ED27751E70D2F987904DFEC4F50] 
+ENC. [pts.    9] [type    3] [base      549] [enha     1389] [psnrY  31.5022] [psnrU  38.9284] [psnrV  37.5780] 
+[MD5Y 67B514115B1000092F12736C34CE1A99] [MD5U 996E87E9BA669FAC3E18A5F196ACF144] [MD5V 759DB70C4A0B62B13E027B8A76C24238] 
+========= ========= ========= ========= ========= ========= ========= ========= 
+PSNR -- YUV  33.6503 -- Y  32.0004 U  39.2778 V  37.9218
+========= ========= ========= ========= ========= ========= ========= ========= 
+BITS -- base   712600 bps -- enha   647760 bps 
+========= ========= ========= ========= ========= ========= ========= ========= 
+/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:461 (main) **** Enh. stop.          9648952
+/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:462 (main) @@@@ Enh. delta          9591124

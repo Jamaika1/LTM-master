@@ -7,11 +7,11 @@ project(TestModel VERSION 0.3
 
 # Options to choose which base codecs are built as shared libraries, versus calling external executable.
 #
-option(LTM_ENABLE_CODECAPI_AVC			"Use LTM Codec API for AVC with JM in shared library"						ON)
+option(LTM_ENABLE_CODECAPI_AVC			"Use LTM Codec API for AVC with JM in shared library"						OFF)
 option(LTM_ENABLE_CODECAPI_HEVC			"Use LTM Codec API for HEVC with HM in shared library"						ON)
-option(LTM_ENABLE_CODECAPI_VVC			"Use LTM Codec API for VVC with VTM in shared library"						ON)
-option(LTM_ENABLE_CODECAPI_EVC			"Use LTM Codec API for EVC with ETM in shared library"						ON)
-option(LTM_BUILD_EXTERNAL_CODECS		"Compile base codecs from respective test model source"						OFF)
+option(LTM_ENABLE_CODECAPI_VVC			"Use LTM Codec API for VVC with VTM in shared library"						OFF)
+option(LTM_ENABLE_CODECAPI_EVC			"Use LTM Codec API for EVC with ETM in shared library"						OFF)
+option(LTM_BUILD_EXTERNAL_CODECS		"Compile base codecs from respective test model source"						ON)
 
 #
 set(SRC_DIR "${PROJECT_SOURCE_DIR}")
@@ -29,7 +29,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Platform-specific flags
 if (UNIX)
-  add_compile_options(-march=sandybridge -mfpmath=sse)
+  #add_compile_options(-march=sandybridge -mfpmath=sse)
   set(CMAKE_C_FLAGS_RELEASE "-g -O3 -fomit-frame-pointer -funroll-loops")
   set(CMAKE_CXX_FLAGS_RELEASE "-g -O3 -fomit-frame-pointer -funroll-loops")
   set(CMAKE_SHARED_LINK_FLAGS_RELEASE "-g -O3 -fomit-frame-pointer -funroll-loops")

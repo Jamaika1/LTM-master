@@ -1,0 +1,1 @@
+../build/ModelEncoder --parameters config.json -w 1920 -h 1080 -f yuv420p -r 50 --limit 10 --base_encoder baseyuv_hevc --qp 37 --base_depth 8 --cq_step_width_loq_1 32767 --cq_step_width_loq_0 1326 --temporal_cq_sw_multiplier 500 -i ../../data/BasketballDrive_1920x1080_50.yuv -o Bask_hevc_qp37_9999_2652_set22_enc  > test_bask37_hevc_enc.txt 2>&1
