@@ -241,9 +241,13 @@ void FileEncoderImpl::encode_file(const string &src_filename, const string &dst_
 	CHECK(es_file.Open(base_bin_filename, es_file_type()));
 
 	// Encode enhancement given src, base and base_recon
+	clock_t EnhaClock1 = clock();
 
 	encode(*src_file, *recon_file, output_file.get(), es_file, dst_filename_yuv, limit);
 
+	clock_t EnhaClock2 = clock();
+
+	INFO("**** Encode enhancement. delta. %16d secs", (EnhaClock2 - EnhaClock1) / CLOCKS_PER_SEC);
 	// Clear up
 	if (!parameters_["keep_base"].get<bool>(false)) {
 		::remove(base_yuv_filename.c_str());

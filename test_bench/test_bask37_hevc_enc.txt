@@ -1,4 +1,4 @@
-/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:215 (main) LTM [/home/pi303/wz/LTM-master/build/ModelEncoder] 8ecb624b17332a3e636aa70c211b01edf4ebf6ef
+/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:215 (main) LTM [/home/pi303/wz/LTM-master/build/ModelEncoder] bcb8663f631af08ac6350fb86f5052a8ee8d0735
 parameter dump_surfaces BOOL        0
 parameter encoding_downsample_chroma STR  lanczos3
 parameter encoding_downsample_luma STR  lanczos3
@@ -13,10 +13,10 @@ width                               1920
 height                              1080
 num_processed_planes                   1
 /home/pi303/wz/LTM-master/encoder/src/Encoder.cpp:307 (update_global_configuration) additional    0 - type    0 - sei    0 - vui    0
-/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:441 (main) **** Enh. start            57828
-/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:204 (encode_file) Using temporary file for base YUV: _temp_00013217__base.yuv
-/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:205 (encode_file) Using temporary file for base stream: _temp_00013217__base.bin
-/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:206 (encode_file) Using temporary file for base recon: _temp_00013217__base_recon.yuv
+/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:441 (main) **** Enh. start            55879
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:204 (encode_file) Using temporary file for base YUV: _temp_00021135__base.yuv
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:205 (encode_file) Using temporary file for base stream: _temp_00021135__base.bin
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:206 (encode_file) Using temporary file for base recon: _temp_00021135__base_recon.yuv
 SW1                                32767
 SW2                                 1326
 transform                              4
@@ -53,7 +53,7 @@ PriorityConfiguration: PM SL-2 type[type_5] PM SL-2 num[5]
 /home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:222 (encode_file) Writing base 7
 /home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:222 (encode_file) Writing base 8
 /home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:222 (encode_file) Writing base 9
-/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:807 (run_base_encoder) Running: /home/pi303/wz/LTM-master/build/external_codecs/HM/TAppEncoder -c /home/pi303/wz/LTM-master/build/external_codecs/HM/encoder_randomaccess_main10.cfg --InputFile=_temp_00013217__base.yuv ---BitstreamFile=_temp_00013217__base.bin --ReconFile=_temp_00013217__base_recon.yuv --SourceWidth=960 --SourceHeight=540 --InputBitDepth=8 --OutputBitDepth=8 --InternalBitDepth=8 --FrameRate=50 --Level=4.1 --QP=37 --IntraPeriod=48 --FramesToBeEncoded=10 --ConformanceWindowMode=1 --InputChromaFormat=420
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:811 (run_base_encoder) Running: /home/pi303/wz/LTM-master/build/external_codecs/HM/TAppEncoder -c /home/pi303/wz/LTM-master/build/external_codecs/HM/encoder_randomaccess_main10.cfg --InputFile=_temp_00021135__base.yuv ---BitstreamFile=_temp_00021135__base.bin --ReconFile=_temp_00021135__base_recon.yuv --SourceWidth=960 --SourceHeight=540 --InputBitDepth=8 --OutputBitDepth=8 --InternalBitDepth=8 --FrameRate=50 --Level=4.1 --QP=37 --IntraPeriod=48 --FramesToBeEncoded=10 --ConformanceWindowMode=1 --InputChromaFormat=420
 ******************************************************************
 ** WARNING: --SEIDecodedPictureHash is now disabled by default. **
 **          Automatic verification of decoded pictures by a     **
@@ -63,9 +63,9 @@ PriorityConfiguration: PM SL-2 type[type_5] PM SL-2 num[5]
 HM software: Encoder Version [16.22] (including RExt)[Linux][GCC 10.2.1][64 bit] 
 
 
-Input          File                    : _temp_00013217__base.yuv
-Bitstream      File                    : _temp_00013217__base.bin
-Reconstruction File                    : _temp_00013217__base_recon.yuv
+Input          File                    : _temp_00021135__base.yuv
+Bitstream      File                    : _temp_00021135__base.bin
+Reconstruction File                    : _temp_00021135__base_recon.yuv
 Real     Format                        : 960x540 50Hz
 Internal Format                        : 960x544 50Hz
 Sequence PSNR output                   : Linear average only
@@ -128,7 +128,7 @@ Non-environment-variable-controlled macros set as follows:
 
 POC    0 TId: 0 ( I-SLICE, nQP 34 QP 34 )      77216 bits [Y 37.3238 dB    U 40.9769 dB    V 40.0647 dB] [ET     6 ] [L0 ] [L1 ]
 POC    8 TId: 1 ( B-SLICE, nQP 41 QP 41 )      22888 bits [Y 34.5105 dB    U 40.4932 dB    V 39.1730 dB] [ET    19 ] [L0 0 ] [L1 0 ]
-POC    4 TId: 2 ( B-SLICE, nQP 44 QP 44 )      10832 bits [Y 33.8460 dB    U 40.5243 dB    V 38.6894 dB] [ET    18 ] [L0 0 8 ] [L1 8 0 ]
+POC    4 TId: 2 ( B-SLICE, nQP 44 QP 44 )      10832 bits [Y 33.8460 dB    U 40.5243 dB    V 38.6894 dB] [ET    16 ] [L0 0 8 ] [L1 8 0 ]
 POC    2 TId: 3 ( B-SLICE, nQP 45 QP 45 )       6520 bits [Y 34.1386 dB    U 40.6409 dB    V 38.8074 dB] [ET    17 ] [L0 0 4 ] [L1 4 8 ]
 POC    1 TId: 4 ( B-SLICE, nQP 46 QP 46 )       3656 bits [Y 34.5314 dB    U 40.7026 dB    V 39.2008 dB] [ET    14 ] [L0 0 2 ] [L1 2 4 ]
 POC    3 TId: 4 ( B-SLICE, nQP 46 QP 46 )       3704 bits [Y 33.7759 dB    U 40.4819 dB    V 38.6721 dB] [ET    17 ] [L0 2 0 ] [L1 4 8 ]
@@ -160,7 +160,7 @@ B Slices--------------------------------------------------------
 RVM: 0.000
 Bytes written to file: 17815 (712.600 kbps)
 
- Total Time:      155.668 sec.
+ Total Time:      153.718 sec.
 /home/pi303/wz/LTM-master/encoder/src/Encoder.cpp:991 (encode) Dither init    0 bitdepth 8
 ENC. [pts.    0] [type    1] [base     9652] [enha     3148] [psnrY  33.9989] [psnrU  39.6014] [psnrV  38.8719] 
 [MD5Y F7E526895645CD354C85188514D9DA97] [MD5U 33A3EDCDC24AD948D3ABD806D4DE0304] [MD5V A92777ECB193F165A1BA92F1F41C95E7] 
@@ -187,5 +187,6 @@ PSNR -- YUV  33.6503 -- Y  32.0004 U  39.2778 V  37.9218
 ========= ========= ========= ========= ========= ========= ========= ========= 
 BITS -- base   712600 bps -- enha   647760 bps 
 ========= ========= ========= ========= ========= ========= ========= ========= 
-/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:461 (main) **** Enh. stop.          9648952
-/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:462 (main) @@@@ Enh. delta          9591124
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:250 (encode_file) **** Encode enhancement. delta.                8 secs
+/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:461 (main) **** Enh. stop.          9679213
+/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:462 (main) @@@@ Enh. delta          9623334
