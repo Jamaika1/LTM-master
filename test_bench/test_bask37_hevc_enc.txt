@@ -1,4 +1,4 @@
-/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:215 (main) LTM [/home/pi303/wz/LTM-master/build/ModelEncoder] bcb8663f631af08ac6350fb86f5052a8ee8d0735
+/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:215 (main) LTM [/home/pi303/wz/LTM-master/build/ModelEncoder] c97bb43bc9557ad699c65fb10cc5ef8dea2dd7a8
 parameter dump_surfaces BOOL        0
 parameter encoding_downsample_chroma STR  lanczos3
 parameter encoding_downsample_luma STR  lanczos3
@@ -13,10 +13,10 @@ width                               1920
 height                              1080
 num_processed_planes                   1
 /home/pi303/wz/LTM-master/encoder/src/Encoder.cpp:307 (update_global_configuration) additional    0 - type    0 - sei    0 - vui    0
-/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:441 (main) **** Enh. start            55879
-/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:204 (encode_file) Using temporary file for base YUV: _temp_00021135__base.yuv
-/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:205 (encode_file) Using temporary file for base stream: _temp_00021135__base.bin
-/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:206 (encode_file) Using temporary file for base recon: _temp_00021135__base_recon.yuv
+/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:441 (main) **** Enh. start            92890
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:204 (encode_file) Using temporary file for base YUV: _temp_00034613__base.yuv
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:205 (encode_file) Using temporary file for base stream: _temp_00034613__base.bin
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:206 (encode_file) Using temporary file for base recon: _temp_00034613__base_recon.yuv
 SW1                                32767
 SW2                                 1326
 transform                              4
@@ -53,140 +53,61 @@ PriorityConfiguration: PM SL-2 type[type_5] PM SL-2 num[5]
 /home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:222 (encode_file) Writing base 7
 /home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:222 (encode_file) Writing base 8
 /home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:222 (encode_file) Writing base 9
-/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:811 (run_base_encoder) Running: /home/pi303/wz/LTM-master/build/external_codecs/HM/TAppEncoder -c /home/pi303/wz/LTM-master/build/external_codecs/HM/encoder_randomaccess_main10.cfg --InputFile=_temp_00021135__base.yuv ---BitstreamFile=_temp_00021135__base.bin --ReconFile=_temp_00021135__base_recon.yuv --SourceWidth=960 --SourceHeight=540 --InputBitDepth=8 --OutputBitDepth=8 --InternalBitDepth=8 --FrameRate=50 --Level=4.1 --QP=37 --IntraPeriod=48 --FramesToBeEncoded=10 --ConformanceWindowMode=1 --InputChromaFormat=420
-******************************************************************
-** WARNING: --SEIDecodedPictureHash is now disabled by default. **
-**          Automatic verification of decoded pictures by a     **
-**          decoder requires this option to be enabled.         **
-******************************************************************
+/home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:921 (run_base_encoder) Running: /home/pi303/wz/LTM-master/build/external_codecs/x265/x265 --input _temp_00034613__base.yuv --input-res 960x540 --fps 50 --qp 37 --input-depth 8 --frames 10 --log-level 2 -o _temp_00034613__base.bin --recon _temp_00034613__base_recon.yuv --recon-depth 8
+yuv  [info]: 960x540 fps 50000/1000 i420p8 frames 0 - 9 of 10
+yuv  [info]: reconstructed images 960x540 fps 50000/1000 i420
+raw  [info]: output file: _temp_00034613__base.bin
+x265 [info]: HEVC encoder version 3.5+36-9b59d4554
+x265 [info]: build info [Linux][GCC 10.2.1][32 bit] 8bit
+x265 [info]: using cpu capabilities: NEON
+x265 [info]: Main profile, Level-3.1 (Main tier)
+x265 [warning]: No thread pool allocated, --wpp disabled
+x265 [warning]: No thread pool allocated, --lookahead-slices disabled
+x265 [info]: Slices                              : 1
+x265 [info]: frame threads / pool features       : 2 / none
+x265 [info]: Coding QT: max CU size, min CU size : 64 / 8
+x265 [info]: Residual QT: max TU size, max depth : 32 / 1 inter / 1 intra
+x265 [info]: ME / range / subpel / merge         : hex / 57 / 2 / 3
+x265 [info]: Keyframe min / max / scenecut / bias  : 25 / 250 / 40 / 5.00 
+x265 [info]: Lookahead / bframes / badapt        : 20 / 4 / 2
+x265 [info]: b-pyramid / weightp / weightb       : 1 / 1 / 0
+x265 [info]: References / ref-limit  cu / depth  : 3 / off / on
+x265 [info]: Rate Control                        : CQP-37
+x265 [info]: tools: rd=3 psy-rd=2.00 early-skip rskip mode=1 signhide tmvp
+x265 [info]: tools: b-intra strong-intra-smoothing deblock sao
+[10.0%] 1/10 frames, 0.95 fps, 5202.80 kb/s, eta 0:00:09  [20.0%] 2/10 frames, 1.53 fps, 3320.20 kb/s, eta 0:00:05  [40.0%] 4/10 frames, 2.47 fps, 1951.20 kb/s, eta 0:00:02  [60.0%] 6/10 frames, 2.94 fps, 1654.27 kb/s, eta 0:00:01  [80.0%] 8/10 frames, 3.30 fps, 1424.50 kb/s, eta 0:00:00                                                                                  x265 [info]: frame I:      1, Avg QP:34.00  kb/s: 4265.60 
+x265 [info]: frame P:      2, Avg QP:37.00  kb/s: 1559.00 
+x265 [info]: frame B:      7, Avg QP:38.71  kb/s: 585.83  
+x265 [info]: Weighted P-Frames: Y:0.0% UV:0.0%
+x265 [info]: consecutive B-frames: 33.3% 0.0% 0.0% 33.3% 33.3% 
 
-HM software: Encoder Version [16.22] (including RExt)[Linux][GCC 10.2.1][64 bit] 
-
-
-Input          File                    : _temp_00021135__base.yuv
-Bitstream      File                    : _temp_00021135__base.bin
-Reconstruction File                    : _temp_00021135__base_recon.yuv
-Real     Format                        : 960x540 50Hz
-Internal Format                        : 960x544 50Hz
-Sequence PSNR output                   : Linear average only
-Sequence MSE output                    : Disabled
-Frame MSE output                       : Disabled
-MS-SSIM output                         : Disabled
-xPSNR calculation                      : Disabled
-Cabac-zero-word-padding                : Enabled
-Frame/Field                            : Frame based coding
-Frame index                            : 0 - 9 (10 frames)
-Profile                                : main10
-CU size / depth / total-depth          : 64 / 4 / 4
-RQT trans. size (min / max)            : 4 / 32
-Max RQT depth inter                    : 3
-Max RQT depth intra                    : 3
-Min PCM size                           : 8
-Motion search range                    : 384
-Intra period                           : 48
-Decoding refresh type                  : 1
-QP                                     : 37
-Max dQP signaling depth                : 0
-Cb QP Offset                           : 0
-Cr QP Offset                           : 0
-QP adaptation                          : 0 (range=0)
-GOP size                               : 16
-Input bit depth                        : (Y:8, C:8)
-MSB-extended bit depth                 : (Y:8, C:8)
-Internal bit depth                     : (Y:8, C:8)
-PCM sample bit depth                   : (Y:8, C:8)
-Intra reference smoothing              : Enabled
-diff_cu_chroma_qp_offset_depth         : -1
-extended_precision_processing_flag     : Disabled
-implicit_rdpcm_enabled_flag            : Disabled
-explicit_rdpcm_enabled_flag            : Disabled
-transform_skip_rotation_enabled_flag   : Disabled
-transform_skip_context_enabled_flag    : Disabled
-cross_component_prediction_enabled_flag: Disabled
-high_precision_offsets_enabled_flag    : Disabled
-persistent_rice_adaptation_enabled_flag: Disabled
-cabac_bypass_alignment_enabled_flag    : Disabled
-log2_sao_offset_scale_luma             : 0
-log2_sao_offset_scale_chroma           : 0
-Cost function:                         : Lossy coding (default)
-RateControl                            : 0
-WPMethod                               : 0
-Max Num Merge Candidates               : 5
-
-TOOL CFG: IBD:0 HAD:1 RDQ:1 RDQTS:1 RDpenalty:0 LQP:0 SQP:0 ASR:1 MinSearchWindow:96 RestrictMESampling:0 FEN:1 ECU:0 FDM:1 CFM:0 ESD:0 RQT:1 TransformSkip:1 TransformSkipFast:1 TransformSkipLog2MaxSize:2 Slice: M=0 SliceSegment: M=0 CIP:0 SAO:1 PCM:0 TransQuantBypassEnabled:0 WPP:0 WPB:0 PME:2  WaveFrontSynchro:0 WaveFrontSubstreams:1 ScalingList:0 TMVPMode:1 AQpS:0 SignBitHidingFlag:1 RecalQP:0
-
-Non-environment-variable-controlled macros set as follows: 
-
-                                RExt__DECODER_DEBUG_BIT_STATISTICS =   0
-                                      RExt__HIGH_BIT_DEPTH_SUPPORT =   0
-                            RExt__HIGH_PRECISION_FORWARD_TRANSFORM =   0
-                                        O0043_BEST_EFFORT_DECODING =   0
-                                         ME_ENABLE_ROUNDING_OF_MVS =   1
-
-                   Input ChromaFormatIDC =   4:2:0
-       Output (internal) ChromaFormatIDC =   4:2:0
-
-POC    0 TId: 0 ( I-SLICE, nQP 34 QP 34 )      77216 bits [Y 37.3238 dB    U 40.9769 dB    V 40.0647 dB] [ET     6 ] [L0 ] [L1 ]
-POC    8 TId: 1 ( B-SLICE, nQP 41 QP 41 )      22888 bits [Y 34.5105 dB    U 40.4932 dB    V 39.1730 dB] [ET    19 ] [L0 0 ] [L1 0 ]
-POC    4 TId: 2 ( B-SLICE, nQP 44 QP 44 )      10832 bits [Y 33.8460 dB    U 40.5243 dB    V 38.6894 dB] [ET    16 ] [L0 0 8 ] [L1 8 0 ]
-POC    2 TId: 3 ( B-SLICE, nQP 45 QP 45 )       6520 bits [Y 34.1386 dB    U 40.6409 dB    V 38.8074 dB] [ET    17 ] [L0 0 4 ] [L1 4 8 ]
-POC    1 TId: 4 ( B-SLICE, nQP 46 QP 46 )       3656 bits [Y 34.5314 dB    U 40.7026 dB    V 39.2008 dB] [ET    14 ] [L0 0 2 ] [L1 2 4 ]
-POC    3 TId: 4 ( B-SLICE, nQP 46 QP 46 )       3704 bits [Y 33.7759 dB    U 40.4819 dB    V 38.6721 dB] [ET    17 ] [L0 2 0 ] [L1 4 8 ]
-POC    6 TId: 3 ( B-SLICE, nQP 45 QP 45 )       6856 bits [Y 33.4173 dB    U 40.3763 dB    V 38.4477 dB] [ET    18 ] [L0 4 0 ] [L1 8 4 ]
-POC    5 TId: 4 ( B-SLICE, nQP 46 QP 46 )       3112 bits [Y 33.3538 dB    U 40.4790 dB    V 38.4542 dB] [ET    17 ] [L0 4 0 ] [L1 6 8 ]
-POC    7 TId: 4 ( B-SLICE, nQP 46 QP 46 )       3344 bits [Y 33.5644 dB    U 40.4092 dB    V 38.6954 dB] [ET    14 ] [L0 6 4 ] [L1 8 6 ]
-POC    9 TId: 4 ( B-SLICE, nQP 46 QP 46 )       4392 bits [Y 33.3268 dB    U 40.0273 dB    V 38.4082 dB] [ET    17 ] [L0 8 0 ] [L1 8 0 ]
-
-
-SUMMARY --------------------------------------------------------
-	Total Frames |   Bitrate     Y-PSNR    U-PSNR    V-PSNR    YUV-PSNR  
-	       10    a     712.6000   34.1788   40.5112   38.8613   35.2479  
-
-
-I Slices--------------------------------------------------------
-	Total Frames |   Bitrate     Y-PSNR    U-PSNR    V-PSNR    YUV-PSNR  
-	        1    i    3860.8000   37.3238   40.9769   40.0647   38.1477  
-
-
-P Slices--------------------------------------------------------
-	Total Frames |   Bitrate     Y-PSNR    U-PSNR    V-PSNR    YUV-PSNR  
-	        0    p          nan       nan       nan       nan       nan  
-
-
-B Slices--------------------------------------------------------
-	Total Frames |   Bitrate     Y-PSNR    U-PSNR    V-PSNR    YUV-PSNR  
-	        9    b     362.8000   33.8294   40.4594   38.7276   35.0189  
-
-RVM: 0.000
-Bytes written to file: 17815 (712.600 kbps)
-
- Total Time:      153.718 sec.
+encoded 10 frames in 2.60s (3.84 fps), 1148.44 kb/s, Avg QP:37.90
 /home/pi303/wz/LTM-master/encoder/src/Encoder.cpp:991 (encode) Dither init    0 bitdepth 8
-ENC. [pts.    0] [type    1] [base     9652] [enha     3148] [psnrY  33.9989] [psnrU  39.6014] [psnrV  38.8719] 
-[MD5Y F7E526895645CD354C85188514D9DA97] [MD5U 33A3EDCDC24AD948D3ABD806D4DE0304] [MD5V A92777ECB193F165A1BA92F1F41C95E7] 
-ENC. [pts.    1] [type    3] [base      457] [enha     1500] [psnrY  32.2872] [psnrU  39.4166] [psnrV  38.1957] 
-[MD5Y A60FB64F5E0EB4E17B2547DF7711EE25] [MD5U 7684F78DD4DED0D17E987397FAAEC517] [MD5V BC970A50DCA9931E6F95AF11CE6225D1] 
-ENC. [pts.    2] [type    3] [base      815] [enha     1589] [psnrY  32.0332] [psnrU  39.3716] [psnrV  37.8813] 
-[MD5Y 224DBE6BF0D3AB3215896BF37202A2BE] [MD5U DA8EC9955C469733970BF6126AD16F5C] [MD5V E223BC2192265F6ED9213865887C387B] 
-ENC. [pts.    3] [type    3] [base      463] [enha     1492] [psnrY  31.8140] [psnrU  39.2520] [psnrV  37.7839] 
-[MD5Y C439B7814B519ED1790B866A1A4B5385] [MD5U 3297193777D05C305C06815AF2AF27C1] [MD5V DAA2784DC3B6DB78E38984993F80FF0B] 
-ENC. [pts.    4] [type    3] [base     1354] [enha     1447] [psnrY  31.8544] [psnrU  39.2844] [psnrV  37.8119] 
-[MD5Y 9F67FFC781DCA219BE3F99EE9C76071B] [MD5U 5D4D6D9F48D5D7B687AC9B446235F237] [MD5V 63CD396504E5E4F968A82E09556EF0D3] 
-ENC. [pts.    5] [type    3] [base      389] [enha     1485] [psnrY  31.5453] [psnrU  39.2668] [psnrV  37.6247] 
-[MD5Y 0458D68F749549771A31CA5FC341544D] [MD5U 66825D842F6E72C2B199BB688A649C1B] [MD5V D7F5927282F8EAAFD0D2E5B5C2F8B14B] 
-ENC. [pts.    6] [type    3] [base      857] [enha     1474] [psnrY  31.5818] [psnrU  39.1858] [psnrV  37.5994] 
-[MD5Y E42A7E7A8A41E3FCF0699D590DEF01AD] [MD5U 37F49AFA4CAE400CBA7B1B704CDF254C] [MD5V 1FA2C24DDCF3B18624ACBF7C66BC4E05] 
-ENC. [pts.    7] [type    3] [base      418] [enha     1495] [psnrY  31.7263] [psnrU  39.2167] [psnrV  37.8193] 
-[MD5Y FAAF62631F84DA7E735FF4D25EECD840] [MD5U 9C3DD53049CEE7E2ABF9B80CC4C919F8] [MD5V 231E77C23B582CB837E664047D151832] 
-ENC. [pts.    8] [type    3] [base     2861] [enha     1175] [psnrY  32.1608] [psnrU  39.2850] [psnrV  38.2081] 
-[MD5Y D140C803FE34D46F9D490005E89FEBF1] [MD5U 9ADB775066AB7E761903892C6BCC366B] [MD5V 86302ED27751E70D2F987904DFEC4F50] 
-ENC. [pts.    9] [type    3] [base      549] [enha     1389] [psnrY  31.5022] [psnrU  38.9284] [psnrV  37.5780] 
-[MD5Y 67B514115B1000092F12736C34CE1A99] [MD5U 996E87E9BA669FAC3E18A5F196ACF144] [MD5V 759DB70C4A0B62B13E027B8A76C24238] 
+ENC. [pts.    0] [type    1] [base    13007] [enha     2988] [psnrY  34.1186] [psnrU  39.6763] [psnrV  39.1080] 
+[MD5Y D3640E87754B04C6776DEC4FFAC8304E] [MD5U E2B5155391139C0279184AA078973B80] [MD5V C64DA5AF7E4DCC500DB223B9635B5A3E] 
+ENC. [pts.    1] [type    3] [base     1056] [enha     1320] [psnrY  32.8642] [psnrU  39.5683] [psnrV  38.2521] 
+[MD5Y D7165D6DECE928E69F9160947D79C36B] [MD5U 0F4367C2EB6201E7379360A4C2F3728E] [MD5V D1611C9AC9D8E31FA81FB1C451FE10A1] 
+ENC. [pts.    2] [type    3] [base     1855] [enha     1237] [psnrY  32.7481] [psnrU  39.3933] [psnrV  38.2483] 
+[MD5Y A8D01D084868FD3067CA85CC98A404A3] [MD5U C37449259E96876D1F1A48DE0943F753] [MD5V E4C9E838B32F4C794A8C3D05E8A789B4] 
+ENC. [pts.    3] [type    3] [base     1093] [enha     1142] [psnrY  32.7362] [psnrU  39.2616] [psnrV  38.0699] 
+[MD5Y 62DC018EDDC1287B29C5349F45897977] [MD5U 924ADD96D0B641FECE61D09EDB2EE9D0] [MD5V 3BE9CD59C09B21F37973F270DA437B5E] 
+ENC. [pts.    4] [type    2] [base     3594] [enha      962] [psnrY  32.8111] [psnrU  39.1521] [psnrV  38.3387] 
+[MD5Y 061D8D6DD4ABB27AE95296EEAA06CE8F] [MD5U 0084631C7AAB49CFFF5C267C4A40DD6F] [MD5V BB98F16C026FA137D93ABD420C912BF1] 
+ENC. [pts.    5] [type    3] [base     1374] [enha     1034] [psnrY  32.5018] [psnrU  39.1489] [psnrV  37.6989] 
+[MD5Y 831DDEE4464AB25C6F4423A47E4AAC70] [MD5U 067B01F5C228B34BB7591C9BBFA9FA7D] [MD5V C68D476C4CF3D53CDF0AD1A9ED5DACB0] 
+ENC. [pts.    6] [type    3] [base     1479] [enha     1085] [psnrY  32.4760] [psnrU  39.1169] [psnrV  37.6884] 
+[MD5Y E30999AD69521614B9CA20E789EC9186] [MD5U FDBA5FBB512AAA1F377703C2F0552396] [MD5V D6259926880E988173771CB377DB1C57] 
+ENC. [pts.    7] [type    3] [base     2302] [enha     1040] [psnrY  32.6141] [psnrU  39.1896] [psnrV  37.8036] 
+[MD5Y A36A89476F548E260FE3DFD54918CF34] [MD5U CAA81193F05DB3CE9289A4E486153362] [MD5V B492DC072037FC70786E3B4894754ED8] 
+ENC. [pts.    8] [type    3] [base     1121] [enha      882] [psnrY  32.5429] [psnrU  39.1697] [psnrV  37.8551] 
+[MD5Y 6ECBABD6437343B87A32DD78398CEE07] [MD5U 8CB7D9BAF2D24BC182F4E4F6CE4DFC97] [MD5V 3F47E50B18E00B3632A6D02C844EB5C0] 
+ENC. [pts.    9] [type    2] [base     4209] [enha      904] [psnrY  32.6091] [psnrU  39.1972] [psnrV  38.2440] 
+[MD5Y 11EF24F6C212DE524D028A11F0904068] [MD5U 0DD27AB53A914327B022C699F915F707] [MD5V 98273A36A02D79022FA340B37A98447B] 
 ========= ========= ========= ========= ========= ========= ========= ========= 
-PSNR -- YUV  33.6503 -- Y  32.0004 U  39.2778 V  37.9218
+PSNR -- YUV  34.2596 -- Y  32.7801 U  39.2835 V  38.1128
 ========= ========= ========= ========= ========= ========= ========= ========= 
-BITS -- base   712600 bps -- enha   647760 bps 
+BITS -- base  1243600 bps -- enha   503760 bps 
 ========= ========= ========= ========= ========= ========= ========= ========= 
 /home/pi303/wz/LTM-master/encoder/src/FileEncoder.cpp:250 (encode_file) **** Encode enhancement. delta.                8 secs
-/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:461 (main) **** Enh. stop.          9679213
-/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:462 (main) @@@@ Enh. delta          9623334
+/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:461 (main) **** Enh. stop.          9844983
+/home/pi303/wz/LTM-master/src/ModelEncoderApp.cpp:462 (main) @@@@ Enh. delta          9752093

@@ -37,3 +37,7 @@ BitstreamDec.txt
 *.vcxproj.user
 
 CMakeLists.txt.user
+
+test_bench/*.bin
+test_bench/*_enc
+test_bench/*.txt

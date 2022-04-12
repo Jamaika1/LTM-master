@@ -90,6 +90,9 @@ Parameters parameter_defaults_global(const Parameters &p) {
 		else if (lowercase(p["base_encoder"].get<std::string>()).compare("evc") == 0 ||
 		         lowercase(p["base_encoder"].get<std::string>()).compare("baseyuv_evc") == 0)
 			base_codec = BaseCoding_EVC;
+		else if (lowercase(p["base_encoder"].get<std::string>()).compare("x265") == 0 ||
+		         lowercase(p["base_encoder"].get<std::string>()).compare("baseyuv_x265") == 0)
+			base_codec = BaseCoding_EVC;
 
 		// Base qp
 		if (p["qp"].empty()) {

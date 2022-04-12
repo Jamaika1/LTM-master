@@ -131,6 +131,7 @@ enum BaseCoding {
 	BaseCoding_HEVC,
 	BaseCoding_VVC,
 	BaseCoding_EVC,
+	BaseCoding_X265,
 	BaseCoding_YUV,
 };
 

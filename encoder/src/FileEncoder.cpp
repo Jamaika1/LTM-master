@@ -869,6 +869,118 @@ public:
 	}
 };
 
+
+class FileEncoderImplX265 : public FileEncoderImpl {
+public:
+	FileEncoderImplX265(const ImageDescription &image_description, unsigned fps, const Parameters &parameters)
+	    : FileEncoderImpl(image_description, fps, parameters) {}
+
+	BaseDecoder::Codec es_file_type() const override { return BaseDecoder::HEVC; };
+	BaseCoding base_coding() const override { return BaseCoding_X265; }
+
+	bool run_base_encoder(const string &yuv_file, const string &es_file, const string &recon_file,
+	                      unsigned frame_count) const override {
+		string prog = get_program_directory("external_codecs/x265/x265");
+		if (encoder_.base_image_description().bit_depth() > Bitdepth_10) {
+			WARN("Using HM with HIGH_BITDEPTH_SUPPORT enabled.");
+			prog.append("_HighBitdepth");
+		}
+
+		const unsigned qp = encoder_.base_qp();
+		unsigned chroma_format;
+		switch (encoder_.base_image_description().colourspace()) {
+		case Colourspace_Y:
+			chroma_format = 400;
+			break;
+		case Colourspace_YUV420:
+			chroma_format = 420;
+			break;
+		case Colourspace_YUV422:
+			chroma_format = 422;
+			break;
+		case Colourspace_YUV444:
+			chroma_format = 444;
+			break;
+		default:
+			ERR("Not a colour space");
+		}
+
+		string cmd_line =
+			format("%s --input %s --input-res %dx%d --fps %d --qp %d --input-depth %d --frames %d --log-level 2 -o %s --recon %s --recon-depth %d",
+			prog.c_str(), yuv_file.c_str(), encoder_.base_image_description().width(), encoder_.base_image_description().height(),
+			fps_, qp, encoder_.base_image_description().bit_depth(), frame_count, es_file.c_str(),
+			recon_file.c_str(), encoder_.base_image_description().bit_depth()
+			);
+
+		// if (encoder_.base_image_description().bit_depth() > Bitdepth_12) {
+		// 	cmd_line.append(" --Profile=main_444_16");
+		// } else if (encoder_.base_image_description().colourspace() != Colourspace_YUV420 ||
+		//            encoder_.base_image_description().bit_depth() > Bitdepth_10)
+		// 	cmd_line.append(" --Profile=main-RExt");
+
+		INFO("Running: %s", cmd_line.c_str());
+		return system(cmd_line.c_str()) == 0;
+	}
+
+	// Insert enhancement data NALU
+	//
+	int add_enhancement(ESFile::AccessUnit &au, bool is_idr, const Packet &payload) override {
+		ESFile::NalUnit nal_unit;
+
+		if (encapsulation_ == Encapsulation_None || encapsulation_ == Encapsulation_NAL) {
+			// Use LCEVC Standard NALU
+			nal_unit = build_nalu(is_idr, payload);
+		} else if (encapsulation_ == Encapsulation_SEI_Registered) {
+			// Encapsulate LCEVC Data into a NAL unit
+			ESFile::NalUnit nal_unit_lcevc = build_nalu(is_idr, payload);
+			Packet payload_lcevc = Packet::build().contents(nal_unit_lcevc.m_data).finish();
+
+			// Regsitered SEI Encapsulation of LCEVC NAL unit
+			static const uint8_t nalu_header[5] = {0x00, 0x00, 0x01, 0x4e, 0x01}; // nal_unit_type=39 (SEI)
+			nal_unit = {39, DataBuffer(nalu_header, nalu_header + sizeof(nalu_header))};
+
+			Packet rbsp = rbsp_encapsulate(RegisteredSEI::sei_payload(payload_lcevc));
+			const PacketView v(rbsp);
+			nal_unit.m_data.insert(nal_unit.m_data.end(), v.data(), v.data() + v.size());
+		} else if (encapsulation_ == Encapsulation_SEI_Unregistered) {
+			// Unregistered SEI Encapsulation
+			static const uint8_t nalu_header[5] = {0x00, 0x00, 0x01, 0x4e, 0x01}; // nal_unit_type=39 (SEI)
+			nal_unit = {39, DataBuffer(nalu_header, nalu_header + sizeof(nalu_header))};
+
+			Packet rbsp = rbsp_encapsulate(UnregisteredSEI::sei_payload(payload));
+			const PacketView v(rbsp);
+			nal_unit.m_data.insert(nal_unit.m_data.end(), v.data(), v.data() + v.size());
+		} else {
+			CHECK(0);
+		}
+
+		unsigned offset = 0;
+		for (offset = 0; offset < au.m_nalUnits.size(); ++offset) {
+			if (au.m_nalUnits[offset].m_type < 32 || au.m_nalUnits[offset].m_type > 35)
+				break;
+		}
+
+		au.m_nalUnits.insert(au.m_nalUnits.begin() + offset, nal_unit);
+		return (int)(nal_unit.m_data.size());
+	}
+
+	bool run_base_decoder(const string &input, const string &output) override {
+		string p = get_program_directory("external_codecs/HM/TAppDecoder");
+		if (encoder_.base_image_description().bit_depth() > Bitdepth_10) {
+			WARN("Using HM with HIGH_BITDEPTH_SUPPORT enabled.");
+			p.append("_HighBitdepth");
+		}
+
+		INFO("Using base decoder %s", p.c_str());
+
+		return system(format("\"%s\" -d %u -b %s -o %s", p.c_str(), encoder_.base_image_description().bit_depth(), input.c_str(),
+		                     output.c_str())
+		                  .c_str()) == 0;
+	}
+};
+
+
+
 //// VVC Base Codec
 //
 class FileEncoderImplVVC : public FileEncoderImpl {
@@ -1143,6 +1255,8 @@ unique_ptr<FileEncoder> CreateFileEncoder(BaseCoding base_encoder, const ImageDe
 			return unique_ptr<FileEncoder>(new FileEncoderImplVVC(image_description, fps, parameters));
 		else if (base_encoder == BaseCoding_EVC)
 			return unique_ptr<FileEncoder>(new FileEncoderImplEVC(image_description, fps, parameters));
+		else if (base_encoder == BaseCoding_X265)
+			return unique_ptr<FileEncoder>(new FileEncoderImplX265(image_description, fps, parameters));
 		else
 			ERR("Unknown base codec");
 	} catch (string e) {
