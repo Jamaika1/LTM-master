@@ -10,3 +10,6 @@
 [submodule "deps/base_evc/ETM"]
 	path = deps/base_evc/ETM
 	url = https://gitlab.com/v-nova-public/ETM.git
+[submodule "deps/base_hevc/deps/base_hevc/x265"]
+	path = deps/base_hevc/deps/base_hevc/x265
+	url = https://bitbucket.org/multicoreware/x265_git.git
