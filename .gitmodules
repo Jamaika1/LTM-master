@@ -3,7 +3,7 @@
 	url = https://gitlab.com/v-nova-public/JM.git
 [submodule "deps/base_hevc/HM"]
 	path = deps/base_hevc/HM
-	url = https://gitlab.com/v-nova-public/HM.git
+	url = https://github.com/eocene317/HM--lcevc.git
 [submodule "deps/base_vvc/VTM"]
 	path = deps/base_vvc/VTM
 	url = https://gitlab.com/v-nova-public/VTM.git
