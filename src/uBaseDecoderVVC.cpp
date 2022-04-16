@@ -38,8 +38,9 @@
 #include <memory.h>
 #include <stdexcept>
 
-#include "CommonLib/BitStream.h"
-#include "DecoderLib/VLCReader.h"
+#include "vvdec/CommonLib/BitStream.h"
+#include "vvdec/CommonLib/ParameterSetManager.h"
+#include "vvdec/DecoderLib/VLCReader.h"
 
 // XXX Collision w/ VTM
 #undef CHECK
@@ -49,7 +50,7 @@
 
 
 using namespace lctm;
-using namespace vtm;
+using namespace vvdec;
 
 namespace vnova {
 namespace utility {
@@ -150,20 +151,20 @@ bool BaseDecoderVVC::ParseNalUnit(const uint8_t *nal, uint32_t nalLength) {
 
 	switch (m_nalUnitType) {
 	case NAL_UNIT_VPS:
-		bSuccess = ParseVPS(bitstream);
+		bSuccess = parseVPS(bitstream);
 		break;
 	case NAL_UNIT_PPS:
-		bSuccess = ParsePPS(bitstream);
+		bSuccess = parsePPS(bitstream);
 		break;
 	case NAL_UNIT_SPS:
-		bSuccess = ParseSPS(bitstream);
+		bSuccess = parseSPS(bitstream);
 		break;
 	case NAL_UNIT_PH:
-		bSuccess = ParsePH(bitstream);
+		bSuccess = parsePH(bitstream);
 		break;
     case NAL_UNIT_PREFIX_APS:
     case NAL_UNIT_SUFFIX_APS:
-		bSuccess = ParseAPS(bitstream);
+		bSuccess = parseAPS(bitstream);
 		break;
 
     case NAL_UNIT_CODED_SLICE_TRAIL:
@@ -174,7 +175,7 @@ bool BaseDecoderVVC::ParseNalUnit(const uint8_t *nal, uint32_t nalLength) {
     case NAL_UNIT_CODED_SLICE_GDR:
     case NAL_UNIT_CODED_SLICE_RADL:
     case NAL_UNIT_CODED_SLICE_RASL:
-		bSuccess = ParseSliceHeader(bitstream);
+		bSuccess = parseSliceHeader(bitstream);
 		break;
 
 	case NAL_UNIT_EOS:
@@ -191,7 +192,7 @@ BaseDecPictType::Enum BaseDecoderVVC::GetBasePictureType() const {
 	return m_basePictureType;
 }
 
-BaseDecNalUnitType::Enum BaseDecoderVVC::GetBaseNalUnitType() const { 
+BaseDecNalUnitType::Enum BaseDecoderVVC::GetBaseNalUnitType() const {
 	return uFromVVC(m_nalUnitType);
 }
 
@@ -241,7 +242,7 @@ uint32_t BaseDecoderVVC::GetTemporalId() const {
 	return m_temporalId;
 }
 
-bool BaseDecoderVVC::ParseVPS(InputBitstream &bitstream) {
+bool BaseDecoderVVC::parseVPS(InputBitstream &bitstream) {
 #if defined __BASE_VVC__
 	VPS *vps = new VPS();
 	m_reader.setBitstream(&bitstream);
@@ -251,40 +252,40 @@ bool BaseDecoderVVC::ParseVPS(InputBitstream &bitstream) {
 	return true;
 }
 
-bool BaseDecoderVVC::ParsePPS(InputBitstream &bitstream) {
+bool BaseDecoderVVC::parsePPS(InputBitstream &bitstream) {
 #if defined __BASE_VVC__
 	PPS *pps = new PPS();
 	m_reader.setBitstream(&bitstream);
-	m_reader.parsePPS(pps);
+	m_reader.parsePPS(pps, &m_parameterSetManager);
 	pps->setLayerId( m_nuhLayerId );
-	pps->setTemporalId( m_temporalId );
+	//pps->setTemporalId( m_temporalId );
 	m_parameterSetManager.storePPS( pps, bitstream.getFifo() );
 #endif // defined __BASE_VVC__
 	return true;
 }
 
-bool BaseDecoderVVC::ParseSPS(InputBitstream &bitstream) {
+bool BaseDecoderVVC::parseSPS(InputBitstream &bitstream) {
 #if defined __BASE_VVC__
 	SPS *sps = new SPS();
 	m_reader.setBitstream(&bitstream);
-	m_reader.parseSPS(sps);
+	m_reader.parseSPS(sps, &m_parameterSetManager);
 	sps->setLayerId( m_nuhLayerId );
 	m_parameterSetManager.storeSPS(sps, bitstream.getFifo());
 #endif // defined __BASE_VVC__
 	return true;
 }
 
-bool BaseDecoderVVC::ParsePH(InputBitstream &bitstream) {
+bool BaseDecoderVVC::parsePH(InputBitstream &bitstream) {
 #if defined __BASE_VVC__
 	PPS *pps = new PPS();
 	m_reader.setBitstream(&bitstream);
-	m_reader.parsePictureHeader(&m_picHeader, &m_parameterSetManager, true );
-	m_picHeader.setValid();
+	m_reader.parsePictureHeader(m_picHeader.get(), &m_parameterSetManager, true );
+	m_picHeader->setValid();
 #endif // defined __BASE_VVC__
 	return true;
 }
 
-bool BaseDecoderVVC::ParseAPS(InputBitstream &bitstream) {
+bool BaseDecoderVVC::parseAPS(InputBitstream &bitstream) {
 #if defined __BASE_VVC__
 	APS* aps = new APS();
 	m_reader.setBitstream(&bitstream);
@@ -297,10 +298,10 @@ bool BaseDecoderVVC::ParseAPS(InputBitstream &bitstream) {
 	return true;
 }
 
-bool BaseDecoderVVC::ParseSliceHeader(InputBitstream &bitstream) {
+bool BaseDecoderVVC::parseSliceHeader(InputBitstream &bitstream) {
 #if defined __BASE_VVC__
 	Slice *slice = new Slice();
-	slice->setPicHeader(&m_picHeader);
+	slice->setPicHeader(m_picHeader.get());
 	slice->initSlice();
 
 	slice->setNalUnitType((NalUnitType)m_nalUnitType);
@@ -309,18 +310,19 @@ bool BaseDecoderVVC::ParseSliceHeader(InputBitstream &bitstream) {
 
 	m_reader.setBitstream(&bitstream);
 	// m_reader.parseSliceHeader(slice, &m_picHeader, &m_parameterSetManager, m_prevTid0POC);
-	m_reader.parseSliceHeader(slice, &m_picHeader, &m_parameterSetManager, m_prevTid0POC, m_prevPOC);
+	bool m_bFirstSliceInPicture = true;
+	m_reader.parseSliceHeader(slice, m_picHeader.get(), &m_parameterSetManager, m_prevTid0POC, m_pcParsePic, m_bFirstSliceInPicture);
 
-	PPS *pps = m_parameterSetManager.getPPS(m_picHeader.getPPSId());
+	PPS *pps = m_parameterSetManager.getPPS(m_apcSlicePilot->getPicHeader()->getPPSId());
 	CHECK(pps);
 	SPS *sps = m_parameterSetManager.getSPS(pps->getSPSId());
 	CHECK(sps);
 
 	// Taking in consideration the conformance window
 	m_width = pps->getPicWidthInLumaSamples() -
-		sps->getWinUnitX(sps->getChromaFormatIdc()) * 
+		sps->getWinUnitX(sps->getChromaFormatIdc()) *
 		(pps->getConformanceWindow().getWindowLeftOffset() + pps->getConformanceWindow().getWindowRightOffset());
-	m_height = pps->getPicHeightInLumaSamples() - 
+	m_height = pps->getPicHeightInLumaSamples() -
 		sps->getWinUnitY(sps->getChromaFormatIdc()) *
 		(pps->getConformanceWindow().getWindowTopOffset() + pps->getConformanceWindow().getWindowBottomOffset());
 
@@ -328,7 +330,7 @@ bool BaseDecoderVVC::ParseSliceHeader(InputBitstream &bitstream) {
 	m_bitdepthChroma = sps->getBitDepth(CHANNEL_TYPE_CHROMA);
 	m_chromaFormatIDC = sps->getChromaFormatIdc();
 
-	if (slice->isIDRorBLA())
+	if (slice->isIDR())
 		m_basePictureType = BaseDecPictType::IDR;
 	else {
 		switch (slice->getSliceType()) {
