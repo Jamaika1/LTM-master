@@ -313,9 +313,9 @@ bool BaseDecoderVVC::parseSliceHeader(InputBitstream &bitstream) {
 	bool m_bFirstSliceInPicture = true;
 	m_reader.parseSliceHeader(slice, m_picHeader.get(), &m_parameterSetManager, m_prevTid0POC, m_pcParsePic, m_bFirstSliceInPicture);
 
-	PPS *pps = m_parameterSetManager.getPPS(m_apcSlicePilot->getPicHeader()->getPPSId());
+	const PPS *pps = static_cast<const ParameterSetManager&>( m_parameterSetManager ).getPPS(m_apcSlicePilot->getPicHeader()->getPPSId());
 	CHECK(pps);
-	SPS *sps = m_parameterSetManager.getSPS(pps->getSPSId());
+	const SPS *sps = static_cast< const ParameterSetManager&>( m_parameterSetManager ).getSPS(pps->getSPSId());
 	CHECK(sps);
 
 	// Taking in consideration the conformance window
