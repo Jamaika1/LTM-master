@@ -110,12 +110,12 @@ public:
 	int64_t GetPictureOrderCountIncrement() const { return 1; }
 
 private:
-	bool ParseVPS(vtm::InputBitstream &bitstream);
-	bool ParsePPS(vtm::InputBitstream &bitstream);
-	bool ParseSPS(vtm::InputBitstream &bitstream);
-	bool ParsePH(vtm::InputBitstream &bitstream);
-	bool ParseAPS(vtm::InputBitstream &bitstream);
-	bool ParseSliceHeader(vtm::InputBitstream &bitstream);
+	bool parseVPS(vvdec::InputBitstream &bitstream);
+	bool parsePPS(vvdec::InputBitstream &bitstream);
+	bool parseSPS(vvdec::InputBitstream &bitstream);
+	bool parsePH(vvdec::InputBitstream &bitstream);
+	bool parseAPS(vvdec::InputBitstream &bitstream);
+	bool parseSliceHeader(vvdec::InputBitstream &bitstream);
 
 	uint32_t m_nuhLayerId =0;
 	uint32_t m_nalUnitType =0;
@@ -123,15 +123,15 @@ private:
 
 	// Reader from VTM
 #if defined __BASE_VVC__
-	vtm::HLSyntaxReader m_reader;
-	vtm::ParameterSetManager m_parameterSetManager;
-	vtm::PicHeader m_picHeader;
+	vvdec::HLSyntaxReader m_reader;
+	vvdec::ParameterSetManager m_parameterSetManager;
+	std::shared_ptr<vvdec::PicHeader> m_picHeader;
 #endif // defined __BASE_VVC__
 
-	vtm::Slice *m_apcSlicePilot = nullptr;
+	vvdec::Slice *m_apcSlicePilot = nullptr;
 	uint32_t m_uiSliceSegmentIdx = 0;
 
-	int m_prevPOC = 0;
+	vvdec::Picture* m_pcParsePic = nullptr;
 	int m_prevTid0POC = 0;
 
 	uint32_t m_width = 0;
